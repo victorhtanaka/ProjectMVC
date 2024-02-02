@@ -10,19 +10,19 @@ namespace ProjectMVC.Models
 
         [Required]
         [StringLength(100)]
-        public string NomeCliente { get; set; }
+        public string? NomeCliente { get; set; }
 
         [StringLength(15)]
-        public string CPFCliente { get; set; }
+        public string? CPFCliente { get; set; }
 
         [StringLength(200)]
-        public string EndCliente { get; set; }
+        public string? EndCliente { get; set; }
 
         [StringLength(150)]
-        public string EmailCliente { get; set; }
+        public string? EmailCliente { get; set; }
 
         [StringLength(15)]
-        public string TelCliente { get; set; }
+        public string? TelCliente { get; set; }
 
         public DateOnly DataNasc { get; set; }
     }

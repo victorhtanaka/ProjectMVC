@@ -10,9 +10,9 @@ namespace ProjectMVC.Models
 
         [Required]
         [StringLength(30)]
-        public string NomeFuncao { get; set; }
+        public string? NomeFuncao { get; set; }
 
         [StringLength(150)]
-        public string DescricaoFuncao { get; set; }
+        public string? DescricaoFuncao { get; set; }
     }
 }

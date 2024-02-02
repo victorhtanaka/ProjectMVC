@@ -11,7 +11,7 @@ namespace ProjectMVC.Models
         public DateTime DataAgenda { get; set; }
 
         [StringLength(50)]
-        public string Modelo { get; set; }
+        public string? Modelo { get; set; }
 
         public int Ano { get; set; }
 

@@ -11,7 +11,7 @@ namespace ProjectMVC.Models
         public decimal Valor { get; set; }
 
         [StringLength(200)]
-        public string DescRelatorio { get; set; }
+        public string? DescRelatorio { get; set; }
 
         [ForeignKey("Agenda")]
         public int FkAgendaCodAgenda { get; set; }

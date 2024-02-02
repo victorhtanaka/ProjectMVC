@@ -10,6 +10,6 @@ namespace ProjectMVC.Models
 
         [Required]
         [StringLength(100)]
-        public string NomeFilial { get; set; }
+        public string? NomeFilial { get; set; }
     }
 }

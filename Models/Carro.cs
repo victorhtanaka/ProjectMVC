@@ -10,16 +10,16 @@ namespace ProjectMVC.Models
 
         [Required]
         [StringLength(18)]
-        public string NumChassi { get; set; }
+        public string? NumChassi { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string ModeloCarro { get; set; }
+        public string? ModeloCarro { get; set; }
 
         public int AnoCarro { get; set; }
 
         [StringLength(20)]
-        public string CorCarro { get; set; }
+        public string? CorCarro { get; set; }
 
         public decimal ValorCarro { get; set; }
 

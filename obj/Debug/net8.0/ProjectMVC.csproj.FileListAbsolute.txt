@@ -137,3 +137,8 @@ C:\Users\victo\OneDrive\Documentos\ProjectMVC\obj\Debug\net8.0\refint\ProjectMVC
 C:\Users\victo\OneDrive\Documentos\ProjectMVC\obj\Debug\net8.0\ProjectMVC.pdb
 C:\Users\victo\OneDrive\Documentos\ProjectMVC\obj\Debug\net8.0\ProjectMVC.genruntimeconfig.cache
 C:\Users\victo\OneDrive\Documentos\ProjectMVC\obj\Debug\net8.0\ref\ProjectMVC.dll
+C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\victo\OneDrive\Documentos\ProjectMVC\obj\Debug\net8.0\ProjectMVC.MvcApplicationPartsAssemblyInfo.cs

@@ -10,9 +10,9 @@ namespace ProjectMVC.Models
 
         [Required]
         [StringLength(50)]
-        public string NomeServico { get; set; }
+        public string? NomeServico { get; set; }
 
         [StringLength(100)]
-        public string DescServico { get; set; }
+        public string? DescServico { get; set; }
     }
 }

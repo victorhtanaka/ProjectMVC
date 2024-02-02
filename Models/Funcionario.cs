@@ -10,19 +10,19 @@ namespace ProjectMVC.Models
 
         [Required]
         [StringLength(100)]
-        public string NomeFuncionario { get; set; }
+        public string? NomeFuncionario { get; set; }
 
         [StringLength(15)]
-        public string CPFFuncionario { get; set; }
+        public string? CPFFuncionario { get; set; }
 
         [StringLength(200)]
-        public string EndFuncionario { get; set; }
+        public string? EndFuncionario { get; set; }
 
         [StringLength(150)]
-        public string EmailFuncionario { get; set; }
+        public string? EmailFuncionario { get; set; }
 
         [StringLength(15)]
-        public string TelFuncionario { get; set; }
+        public string? TelFuncionario { get; set; }
 
         public DateOnly DataNasc { get; set; }
 
@@ -33,5 +33,6 @@ namespace ProjectMVC.Models
 
         [ForeignKey("Funcao")]
         public int FkFuncaoCodFuncao { get; set; }
+        
     }
 }

@@ -5,6 +5,8 @@ namespace ProjectMVC.Models
 {
     public class AcessorioCarro
     {
+        [Key]
+        public int CodAcessorioCarro { get; set; }
         [ForeignKey("Acessorio")]
         public int FkAcessorioCodAcessorio { get; set; }
 

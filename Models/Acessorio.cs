@@ -10,6 +10,6 @@ namespace ProjectMVC.Models
 
         [Required]
         [StringLength(50)]
-        public string NomeAcessorio { get; set; }
+        public string? NomeAcessorio { get; set; }
     }
 }
