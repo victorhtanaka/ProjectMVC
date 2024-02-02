@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ProjectMVC.Models
 {
-    public class HotelContext : DbContext
+    public class ProjectContext : DbContext
     {
         public DbSet<AcessorioCarro> AcessoriosCarros { get; set; } = null!;
         public DbSet<Acessorio> Acessorios { get; set; } = null!;
