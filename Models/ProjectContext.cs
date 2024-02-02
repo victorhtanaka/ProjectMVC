@@ -16,6 +16,11 @@ namespace ProjectMVC.Models
         public DbSet<Servico> Servicos { get; set; } = null!;
         public DbSet<Venda> Vendas { get; set; } = null!;
 
+        internal static string? ToList()
+        {
+            throw new NotImplementedException();
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=DESKTOP-H6HOM7Q\SQLEXPRESS;Database=ProjectMVC;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True;");
