@@ -1,14 +1,13 @@
 @model Funcionario;
 @{
-    ViewData["Title"] = "Adicionar Funcionario";
+    ViewData["Title"] = "Editar Funcionario";
 }
 @{
-
-    IEnumerable<Filial> Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
+   IEnumerable<Filial> Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
     IEnumerable<Funcao> Funcoes = ViewData["Funcoes"] as IEnumerable<Funcao>;
 }
 
-<form asp-action="CriarFuncionario" asp-controller="Funcionario" method="post">
+<form asp-action="Editar" asp-controller="Funcionario" method="post">
 
     <div class="row">
 
@@ -61,10 +60,10 @@
 
             <div class="form-group">
                 <label>Funçao:</label>
-                <select asp-for="FkFuncaoCodFuncao" class="form-control" required>
-                    @foreach(var funcao in ViewData["Funcoes"] as List<Funcao>)
+                <select asp-for="FkFilialCodFilial" class="form-control" required>
+                    @foreach(var filial in ViewData["Filiais"] as List<Filial>)
                     {
-                        <option value="@funcao.CodFuncao">@funcao.NomeFuncao</option>
+                        <option value="@filial.CodFilial">@filial.NomeFilial</option>
                     }
                 </select>
             </div>
@@ -74,8 +73,8 @@
             </div>
             <div class="card-footer">
                 <center>
-                    <button type="submit" class="btn-primary">Adicionar Funcionario</button>
-                    <a asp-action="Index" asp-controller="Funcionarios" class="btn-secondary"></a>
+                    <button type="submit" class="btn-primary">Salvar Funcionario</button>
+                    <a asp-action="Index" asp-controller="Funcionario" class="btn-secondary"></a>
                 </center>
             </div>
 

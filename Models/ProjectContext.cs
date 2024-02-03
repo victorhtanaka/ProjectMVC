@@ -15,6 +15,7 @@ namespace ProjectMVC.Models
         public DbSet<Relatorio> Relatorios { get; set; } = null!;
         public DbSet<Servico> Servicos { get; set; } = null!;
         public DbSet<Venda> Vendas { get; set; } = null!;
+        public DbSet<AdminInfo> AdminInfos { get; set; } = null!;
 
         internal static string? ToList()
         {

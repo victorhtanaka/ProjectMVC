@@ -16,15 +16,23 @@ public class FuncionarioController : Controller
 
     public IActionResult Index()
     {
+        return View();
+    }
+
+    // READ
+    public IActionResult Get()
+    {
         var funcionarios = _db.Funcionarios.ToList();
         return View(funcionarios);
     }
 
+    // CREATE
     public IActionResult Create()
     {
 
         ViewData["Funcionario"] = new Funcionario();
         ViewData["Filiais"] = _db.Filiais.ToList();
+        ViewData["Funcoes"] = _db.Funcoes.ToList();
 
         return View();
     }
@@ -37,4 +45,35 @@ public class FuncionarioController : Controller
 
         return RedirectToAction("Index");
     }
+
+    // UPDATE
+    public IActionResult Edit(int id)
+    {
+        var funcionario = _db.Funcionarios.Find(id);
+
+        if (funcionario == null)
+        {
+            return NotFound();
+        }
+        ViewData["Filiais"] = _db.Filiais.ToList();
+        ViewData["Funcoes"] = _db.Funcoes.ToList();
+
+        return View(funcionario);
+    }
+
+    [HttpPut]
+    public IActionResult EditarFuncionario(Funcionario funcionario)
+    {
+        if (ModelState.IsValid)
+        {
+            _db.Funcionarios.Update(funcionario);
+            _db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        return View("Editar", funcionario);
+    }
+
+    // DELETE
 }

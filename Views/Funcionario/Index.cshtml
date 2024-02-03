@@ -1,30 +1,3 @@
-@model List<Funcionario>
-    
-@{
-    ViewData["Title"] = "Funcionarios";
-}
-
-<h1>Funcionarios</h1>
-
-<div class="row">
-    <div class="col-md-12">
-        <table class="table">
-            <thead>
-                <tr>
-                    <td>Nome</td>
-                    <td>Cpf</td>
-                    <td>Email</td>
-                </tr>
-            </thead>
-            <tbody>
-                    @foreach(var item in Model){
-                        <tr>
-                            <td>@item.NomeFuncionario</td>
-                            <td>@item.CPFFuncionario</td>
-                            <td>@item.EmailFuncionario</td>
-                        </tr>
-                    }
-            </tbody>
-        </table>
-    </div>
+<div class="text-center">
+    <a asp-controller="Funcionario" asp-action="Get">Ver funcionario</a>
 </div>
