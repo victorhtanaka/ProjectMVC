@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using System.Dynamic;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers;
@@ -14,16 +15,26 @@ public class FuncionarioController : Controller
         _db = db;
     }
 
-    public IActionResult Index()
-    {
-        return View();
-    }
-
     // READ
     public IActionResult Get()
     {
         var funcionarios = _db.Funcionarios.ToList();
         return View(funcionarios);
+    }
+
+    public IActionResult GetInfo(int id)
+    {
+
+        var funcionario = _db.Funcionarios.Find(id);
+
+        if (funcionario == null)
+        {
+            return NotFound();
+        }
+        ViewData["Filiais"] = _db.Filiais.ToList();
+        ViewData["Funcoes"] = _db.Funcoes.ToList();
+
+        return View(funcionario);
     }
 
     // CREATE
@@ -43,7 +54,7 @@ public class FuncionarioController : Controller
         _db.Funcionarios.Add(funcionario);
         _db.SaveChanges();
 
-        return RedirectToAction("Index");
+        return RedirectToAction("Get");
     }
 
     // UPDATE
@@ -70,7 +81,7 @@ public class FuncionarioController : Controller
             _db.Entry(FuncAntigo).CurrentValues.SetValues(funcionario);
             _db.SaveChanges();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Get");
         }
 
         return View("Edit", funcionario);
@@ -99,7 +110,7 @@ public class FuncionarioController : Controller
             _db.Funcionarios.Remove(item);
             _db.SaveChanges();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Get");
         }
 
         return View("Delete", funcionario);

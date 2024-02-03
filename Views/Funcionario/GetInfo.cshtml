@@ -1,0 +1,68 @@
+@model Funcionario;
+@{
+    ViewData["Title"] = "Ver Funcionario";
+}
+@{
+    IEnumerable<Filial> Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
+    IEnumerable<Funcao> Funcoes = ViewData["Funcoes"] as IEnumerable<Funcao>;
+
+    Filial filialDoFuncionario = Filiais.FirstOrDefault(f => f.CodFilial == Model.FkFilialCodFilial);
+
+    Funcao funcaoDoFuncionario = Funcoes.FirstOrDefault(f => f.CodFuncao == Model.FkFuncaoCodFuncao);
+}
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="form-group">
+                <label>Codigo:</label>
+                <p>@Model.CodFuncionario</p>
+            </div>
+
+            <div class="form-group">
+                <label>Nome:</label>
+                <p>@Model.NomeFuncionario</p>
+            </div>
+
+            <div class="form-group">
+                <label>CPF:</label>
+                <p>@Model.CPFFuncionario</p>
+            </div>
+
+            <div class="form-group">
+                <label>Endereço:</label>
+                <p>@Model.EndFuncionario</p>
+            </div>
+
+            <div class="form-group">
+                <label>Email:</label>
+                <p>@Model.EmailFuncionario</p>
+            </div>
+
+            <div class="form-group">
+                <label>Telefone:</label>
+                <p>@Model.TelFuncionario</p>
+            </div>
+
+            <div class="form-group">
+                <label>Data de Nascimento:</label>
+                <p>@Model.DataNasc</p>
+            </div>
+
+            <div class="form-group">
+                <label>Salário:</label>
+                <p>@Model.SalarioFuncionario</p>
+            </div>
+
+            <div class="form-group">
+                <label>Filial:</label>
+                <p>@(filialDoFuncionario != null ? filialDoFuncionario.NomeFilial : "Filial não encontrada")</p>
+            </div>
+
+            <div class="form-group">
+                <label>Funçao:</label>
+                <p>@(funcaoDoFuncionario != null ? funcaoDoFuncionario.NomeFuncao : "Função não encontrada")</p>
+            </div>
+            </div>
+        </div>
+    </div>

@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap');
+
 html {
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
 }
 
@@ -24,4 +27,31 @@ body {
 .icon-td {
   display: flex;
   column-gap: 8px;
+}
+
+.form-group1 {
+  display: flex;
+}
+
+.col-lg-12 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+}
+
+.btn-delete {
+  color: #fff;
+  background-color: #c21b2c;
+
+}
+
+.btn-cancelar {
+  color: #fff;
+  background-color: #808080;
+}
+
+.btn-header {
+  display: flex;
+  justify-content: space-between;
+  
 }
