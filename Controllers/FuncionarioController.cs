@@ -61,19 +61,47 @@ public class FuncionarioController : Controller
         return View(funcionario);
     }
 
-    [HttpPut]
+    [HttpPost]
     public IActionResult EditarFuncionario(Funcionario funcionario)
     {
         if (ModelState.IsValid)
         {
-            _db.Funcionarios.Update(funcionario);
+            var FuncAntigo = _db.Funcionarios.Find(funcionario.CodFuncionario);
+            _db.Entry(FuncAntigo).CurrentValues.SetValues(funcionario);
             _db.SaveChanges();
 
             return RedirectToAction("Index");
         }
 
-        return View("Editar", funcionario);
+        return View("Edit", funcionario);
     }
 
     // DELETE
+    public IActionResult Delete(int id)
+    {
+        var funcionario = _db.Funcionarios.Find(id);
+
+        if (funcionario == null)
+        {
+            return NotFound();
+        }
+        ViewData["Filiais"] = _db.Filiais.ToList();
+        ViewData["Funcoes"] = _db.Funcoes.ToList();
+
+        return View(funcionario);
+    }
+
+    public IActionResult DeletarFuncionario(Funcionario funcionario)
+    {
+        if (ModelState.IsValid)
+        {
+            var item = _db.Funcionarios.Find(funcionario.CodFuncionario);
+            _db.Funcionarios.Remove(item);
+            _db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        return View("Delete", funcionario);
+    }
 }
