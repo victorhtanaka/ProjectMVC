@@ -59,6 +59,31 @@ namespace ProjectMVC.Migrations
                     b.ToTable("AcessoriosCarros");
                 });
 
+            modelBuilder.Entity("ProjectMVC.Models.AdminInfo", b =>
+                {
+                    b.Property<int>("CodAdmin")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CodAdmin"));
+
+                    b.Property<int>("FkFilialCodFilial")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LoginAdmin")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("SenhaAdmin")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.HasKey("CodAdmin");
+
+                    b.ToTable("AdminInfos");
+                });
+
             modelBuilder.Entity("ProjectMVC.Models.Agenda", b =>
                 {
                     b.Property<int>("CodAgenda")
@@ -114,6 +139,10 @@ namespace ProjectMVC.Migrations
 
                     b.Property<float>("KmCarro")
                         .HasColumnType("real");
+
+                    b.Property<string>("MarcaCarro")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("ModeloCarro")
                         .IsRequired()

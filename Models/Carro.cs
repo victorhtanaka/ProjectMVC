@@ -16,6 +16,9 @@ namespace ProjectMVC.Models
         [StringLength(50)]
         public string? ModeloCarro { get; set; }
 
+        [StringLength(30)]
+        public string? MarcaCarro { get; set; }
+
         public int AnoCarro { get; set; }
 
         [StringLength(20)]

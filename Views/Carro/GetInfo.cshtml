@@ -1,0 +1,60 @@
+@model Carro;
+@{
+    ViewData["Title"] = "Ver Carro";
+}
+@{
+    IEnumerable<Filial> Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
+
+    Filial filialDoFuncionario = Filiais.FirstOrDefault(f => f.CodFilial == Model.FkFilialCodFilial);
+}
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="form-group">
+                <label>Codigo:</label>
+                <p>@Model.CodCarro</p>
+            </div>
+
+            <div class="form-group">
+                <label>Numero do Chassi:</label>
+                <p>@Model.NumChassi</p>
+            </div>
+
+            <div class="form-group">
+                <label>Modelo do carro:</label>
+                <p>@Model.ModeloCarro</p>
+            </div>
+
+            <div class="form-group">
+                <label>Marca do carro:</label>
+                <p>@Model.MarcaCarro</p>
+            </div>
+
+            <div class="form-group">
+                <label>Ano do carro:</label>
+                <p>@Model.AnoCarro</p>
+            </div>
+
+            <div class="form-group">
+                <label>Cor do carro:</label>
+                <p>@Model.CorCarro</p>
+            </div>
+
+            <div class="form-group">
+                <label>Valor do carro:</label>
+                <p>@Model.ValorCarro</p>
+            </div>
+
+            <div class="form-group">
+                <label>Quilometragem:</label>
+                <p>@Model.KmCarro</p>
+            </div>
+
+            <div class="form-group">
+                <label>Filial:</label>
+                <p>@(filialDoFuncionario != null ? filialDoFuncionario.NomeFilial : "Filial não encontrada")</p>
+            </div>
+            </div>
+        </div>
+    </div>

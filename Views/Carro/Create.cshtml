@@ -1,0 +1,75 @@
+@model Carro;
+@{
+    ViewData["Title"] = "Adicionar Carro";
+}
+@{
+    IEnumerable<Filial> Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
+}
+
+<form asp-action="CriarCarro" asp-controller="Carro" method="post">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="form-group">
+                <label>Numero do Chassi:</label>
+                <input asp-for="NumChassi" type="text" pattern="[A-Za-z0-9]{3}[A-Za-z0-9]{6}[A-Za-z0-9]{2}[A-Za-z0-9]{6}" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Modelo do carro:</label>
+                <input asp-for="ModeloCarro" type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Marca do carro:</label>
+                <input asp-for="MarcaCarro" type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Ano do carro(9999):</label>
+                <input asp-for="AnoCarro" type="text" pattern="[0-9]{4}" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Cor do carro:</label>
+                <input asp-for="CorCarro" type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Valor do carro:</label>
+                <input asp-for="ValorCarro" type="text" pattern="[0-9]+,[0-9]{2}" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Quilometragem:</label>
+                <input asp-for="KmCarro" type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Filial:</label>
+                <select asp-for="FkFilialCodFilial" class="form-control" required>
+                    @foreach(var filial in ViewData["Filiais"] as List<Filial>)
+                    {
+                        <option value="@filial.CodFilial">@filial.NomeFilial</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <div asp-validation-summary="All" class="text-danger"></div>
+            </div>
+
+            <div class="card-footer">
+                <center>
+                    <button type="submit" class="btn-primary">Adicionar Carro</button>
+                    <button asp-action="Get" asp-controller="Carro" class="btn-cancelar">Cancelar</button>
+                </center>
+            </div>
+
+        </div>
+
+    </div>
+
+</form>

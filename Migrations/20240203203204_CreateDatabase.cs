@@ -39,6 +39,21 @@ namespace ProjectMVC.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "AdminInfos",
+                columns: table => new
+                {
+                    CodAdmin = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    LoginAdmin = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    SenhaAdmin = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    FkFilialCodFilial = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AdminInfos", x => x.CodAdmin);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Agendas",
                 columns: table => new
                 {
@@ -65,6 +80,7 @@ namespace ProjectMVC.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NumChassi = table.Column<string>(type: "nvarchar(18)", maxLength: 18, nullable: false),
                     ModeloCarro = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    MarcaCarro = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
                     AnoCarro = table.Column<int>(type: "int", nullable: false),
                     CorCarro = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
                     ValorCarro = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
@@ -197,6 +213,9 @@ namespace ProjectMVC.Migrations
 
             migrationBuilder.DropTable(
                 name: "AcessoriosCarros");
+
+            migrationBuilder.DropTable(
+                name: "AdminInfos");
 
             migrationBuilder.DropTable(
                 name: "Agendas");

@@ -40,7 +40,7 @@
 
             <div class="form-group">
                 <label>Telefone:</label>
-                <input asp-for="TelFuncionario" type="tel" pattern="[0-9]{2}( |-)?[0-9]{9}" class="form-control" readonly>
+                <input asp-for="TelFuncionario" type="tel" class="form-control" readonly>
             </div>
 
             <div class="form-group">
@@ -71,10 +71,12 @@
                         <option value="@funcao.CodFuncao">@funcao.NomeFuncao</option>
                     }
                 </select>
-            </div class="form-group-2">
+            </div>
+
+            <div class="form-group-2">
                 <center>
                     <button type="submit" class="btn-delete">Excluir Funcionario</button>
-                    <button asp-action="get" asp-controller="Funcionario" class="btn-cancelar">Cancelar</button>
+                    <a asp-action="Get" asp-controller="Funcionario" class="btn-cancelar">Cancelar</a>
                 </center>
             </div>
 
