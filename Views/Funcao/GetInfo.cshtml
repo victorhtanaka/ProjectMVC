@@ -1,6 +1,6 @@
-@model Filial;
+@model Funcao;
 @{
-    ViewData["Title"] = "Ver Filial";
+    ViewData["Title"] = "Ver Funcao";
 }
 <h1>Informacoes Detalhadas</h1>
     <div class="row">
@@ -9,12 +9,17 @@
 
             <div class="form-group">
                 <label>Codigo:</label>
-                <p>@Model.CodFilial</p>
+                <p>@Model.CodFuncao</p>
             </div>
 
             <div class="form-group">
                 <label>Nome:</label>
-                <p>@Model.NomeFilial</p>
+                <p>@Model.NomeFuncao</p>
+            </div>
+
+            <div class="form-group">
+                <label>Descricao:</label>
+                <p>@Model.DescricaoFuncao</p>
             </div>
 
         </div>

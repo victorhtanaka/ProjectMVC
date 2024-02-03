@@ -58,6 +58,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsaWFsXEdldEluZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Funcao/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2FvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Funcao/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2FvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Funcao/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2FvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Funcao/Get.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2FvXEdldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Funcao/GetInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2FvXEdldEluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Funcionario/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
