@@ -3,9 +3,9 @@
     ViewData["Title"] = "Ver Carro";
 }
 @{
-    IEnumerable<Filial> Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
+    IEnumerable<Filial>? Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
 
-    Filial filialDoFuncionario = Filiais.FirstOrDefault(f => f.CodFilial == Model.FkFilialCodFilial);
+    Filial? filialDoFuncionario = Filiais.FirstOrDefault(f => f.CodFilial == Model.FkFilialCodFilial);
 }
 <h1>Informacoes Detalhadas</h1>
     <div class="row">

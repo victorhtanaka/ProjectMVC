@@ -4,8 +4,8 @@
 }
 @{
 
-    IEnumerable<Filial> Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
-    IEnumerable<Funcao> Funcoes = ViewData["Funcoes"] as IEnumerable<Funcao>;
+    IEnumerable<Filial>? Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
+    IEnumerable<Funcao>? Funcoes = ViewData["Funcoes"] as IEnumerable<Funcao>;
 }
 <h1>Criar Funcionarios</h1>
 <form asp-action="CriarFuncionario" asp-controller="Funcionario" method="post">

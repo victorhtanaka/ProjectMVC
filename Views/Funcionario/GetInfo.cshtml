@@ -3,12 +3,12 @@
     ViewData["Title"] = "Ver Funcionario";
 }
 @{
-    IEnumerable<Filial> Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
-    IEnumerable<Funcao> Funcoes = ViewData["Funcoes"] as IEnumerable<Funcao>;
+    IEnumerable<Filial>? Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
+    IEnumerable<Funcao>? Funcoes = ViewData["Funcoes"] as IEnumerable<Funcao>;
 
-    Filial filialDoFuncionario = Filiais.FirstOrDefault(f => f.CodFilial == Model.FkFilialCodFilial);
+    Filial? filialDoFuncionario = Filiais.FirstOrDefault(f => f.CodFilial == Model.FkFilialCodFilial);
 
-    Funcao funcaoDoFuncionario = Funcoes.FirstOrDefault(f => f.CodFuncao == Model.FkFuncaoCodFuncao);
+    Funcao? funcaoDoFuncionario = Funcoes.FirstOrDefault(f => f.CodFuncao == Model.FkFuncaoCodFuncao);
 }
 <h1>Informacoes Detalhadas</h1>
     <div class="row">

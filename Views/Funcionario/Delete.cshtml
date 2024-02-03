@@ -3,8 +3,8 @@
     ViewData["Title"] = "Deletar Funcionario";
 }
 @{
-   IEnumerable<Filial> Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
-    IEnumerable<Funcao> Funcoes = ViewData["Funcoes"] as IEnumerable<Funcao>;
+   IEnumerable<Filial>? Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
+    IEnumerable<Funcao>? Funcoes = ViewData["Funcoes"] as IEnumerable<Funcao>;
 }
 <h1>Deletar Funcionarios</h1>
 <form asp-action="DeletarFuncionario" asp-controller="Funcionario" method="post">

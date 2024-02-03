@@ -3,7 +3,7 @@
     ViewData["Title"] = "Deletar Carro";
 }
 @{
-    IEnumerable<Filial> Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
+    IEnumerable<Filial>? Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
 }
 <h1>Deletar Carro</h1>
 <form asp-action="DeletarCarro" asp-controller="Carro" method="post">
