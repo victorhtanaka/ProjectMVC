@@ -30,6 +30,10 @@ public class AccountController : Controller
     public async Task<IActionResult> Login(AdminInfo modelLogin)
     {
         var admin = _db.AdminInfos.Find(modelLogin.LoginAdmin);
+        if (admin == null)
+        {
+            return NotFound("Login ou senha incorretos");
+        }
 
         if (modelLogin.LoginAdmin == admin.LoginAdmin &&
             modelLogin.SenhaAdmin == admin.SenhaAdmin

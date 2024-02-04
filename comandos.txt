@@ -13,3 +13,6 @@ dotnet ef database update
 dotnet add package Microsoft.AspNetCore.Authentication.Cookies
 dotnet add package Microsoft.AspNetCore.Authentication
 dotnet add package Microsoft.AspNet.Identity.Owin
+
+dotnet run --urls http://0.0.0.0:5000
+ip:5000

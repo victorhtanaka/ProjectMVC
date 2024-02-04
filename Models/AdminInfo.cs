@@ -12,7 +12,7 @@ namespace ProjectMVC.Models
         [StringLength(30)]
         public string? SenhaAdmin { get; set; }
 
-        public bool RememberMe { get; internal set; }
+        public bool RememberMe { get; set; }
 
         [ForeignKey("Filial")]
         public int FkFilialCodFilial { get; set; }

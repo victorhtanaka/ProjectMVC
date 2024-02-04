@@ -1,74 +1,63 @@
-@model Funcionario;
+@model Venda;
 @{
-    ViewData["Title"] = "Editar Funcionario";
+    ViewData["Title"] = "Editar Venda";
 }
 @{
-    IEnumerable<Filial> Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
-    IEnumerable<Funcao> Funcoes = ViewData["Funcoes"] as IEnumerable<Funcao>;
+
+    IEnumerable<Cliente>? Clientes = ViewData["Clientes"] as IEnumerable<Cliente>;
+    IEnumerable<Carro>? Carros = ViewData["Carros"] as IEnumerable<Carro>;
+    IEnumerable<Funcionario>? funcionarios = ViewData["Funcionarios"] as IEnumerable<Funcionario>;
 }
-<h1>Editar Funcionario</h1>
-<form asp-action="EditarFuncionario" asp-controller="Funcionario" method="post">
+<h1>Editar Venda</h1>
+<form asp-action="EditarVenda" asp-controller="Venda" method="post">
 
     <div class="row">
 
         <div class="col-lg-12">
-
             <div class="form-group">
                 <label>Codigo:</label>
-                <input asp-for="CodFuncionario" type="text" class="form-control" readonly>
+                <input asp-for="CodVenda" type="text" class="form-control" readonly>
             </div>
 
             <div class="form-group">
-                <label>Nome:</label>
-                <input asp-for="NomeFuncionario" type="text" class="form-control" required>
+                <label>Data da venda:</label>
+                <input asp-for="DataVenda" type="date" class="form-control" readonly>
             </div>
 
             <div class="form-group">
-                <label>CPF:</label>
-                <input asp-for="CPFFuncionario" type="text" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" title="Formato correto: 999.999.999-99" class="form-control" required>
+                <label>Ultima revisão:</label>
+                <input asp-for="UltimaRevisao" type="date" class="form-control" readonly>
             </div>
 
             <div class="form-group">
-                <label>Endereço:</label>
-                <input asp-for="EndFuncionario" type="text" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label>Email:</label>
-                <input asp-for="EmailFuncionario" type="email" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label>Telefone:</label>
-                <input asp-for="TelFuncionario" type="tel" pattern="[0-9]{2}-[0-9]{9}" title="Formato correto: 99-999999999" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label>Data de Nascimento:</label>
-                <input asp-for="DataNasc" type="date" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label>Salário:</label>
-                <input asp-for="SalarioFuncionario" type="text" pattern="[0-9]+,[0-9]{2}" title="Formato correto: 999,99" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label>Filial:</label>
-                <select asp-for="FkFilialCodFilial" class="form-control" required>
-                    @foreach(var filial in ViewData["Filiais"] as List<Filial>)
+                <div class="label-redirect">
+                    <label>Cliente:</label>
+                    <a class="redirect-a" asp-action="Create" asp-controller="Cliente">Criar Cliente</a>
+                </div>
+                <select asp-for="FkClienteCodCliente" class="form-control" readonly>
+                    @foreach(var Cliente in ViewData["Clientes"] as List<Cliente>)
                     {
-                        <option value="@filial.CodFilial">@filial.NomeFilial</option>
+                        <option value="@Cliente.CodCliente">@Cliente.NomeCliente</option>
                     }
                 </select>
             </div>
-            
+
             <div class="form-group">
-                <label>Funçao:</label>
-                <select asp-for="FkFuncaoCodFuncao" class="form-control" required>
-                    @foreach(var funcao in ViewData["Funcoes"] as List<Funcao>)
+                <label>Carro:</label>
+                <select asp-for="FkCarroCodCarro" class="form-control" readonly>
+                    @foreach(var Carro in ViewData["Carros"] as List<Carro>)
                     {
-                        <option value="@funcao.CodFuncao">@funcao.NomeFuncao</option>
+                        <option value="@Carro.CodCarro">@Carro.ModeloCarro</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Vendedor:</label>
+                <select asp-for="FkFuncionarioCodFuncionario" class="form-control" readonly>
+                    @foreach(var Carro in ViewData["Funcoes"] as List<Carro>)
+                    {
+                        <option value="@Carro.CodCarro">@Carro.ModeloCarro</option>
                     }
                 </select>
             </div>
@@ -76,11 +65,11 @@
             <div class="form-group">
                 <div asp-validation-summary="All" class="text-danger"></div>
             </div>
-
+            
             <div class="card-footer">
                 <center>
-                    <button type="submit" class="btn-primary">Salvar Funcionario</button>
-                    <button type="reset" asp-action="Get" asp-controller="Funcionario" class="btn-cancelar">Cancelar</button>
+                    <button type="submit" class="btn-primary">Editar Venda</button>
+                    <button type="reset" asp-action="Get" asp-controller="Venda" class="btn-cancelar">Cancelar</button>
                 </center>
             </div>
 

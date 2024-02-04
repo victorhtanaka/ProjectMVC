@@ -1,27 +1,43 @@
 @model ProjectMVC.Models.AdminInfo
 
 @{
-    ViewData["Title"] = "Login";
+    Layout = null;
 }
 
-<h2>Login</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <title>Entrar</title>
+</head>
+<body class="body-form">
+    <div class="container-form">
+        <div class="section-form">
+            <h1>Entrar</h1>
+            
+            <form class="form-login" asp-controller="Account" asp-action="Login" method="post">
 
-<form asp-controller="Account" asp-action="Login" method="post">
-    <h1>Login</h1>
-    <input type="text" placeholder="Login" asp-for="LoginAdmin"/>
-    <input type="password" placeholder="Senha" asp-for="SenhaAdmin"/>
+                <div class="form-input">
+                    <input type="text" placeholder="Login" asp-for="LoginAdmin"/>
+                    <input type="password" placeholder="Senha" asp-for="SenhaAdmin"/>
+                    <label class="label-check">
+                        <input type="checkbox" asp-for="RememberMe" />
+                        Me mantenha conectado.
+                    </label>
+                </div><br>
 
-    <label>
-        <input type="checkbox" asp-for="RememberMe" />
-        Keep me logged In.
-    </label>
-    <button type="submit">Login</button>
+                <button class="btn-login" type="submit">Entrar</button>
 
-    @if (ViewData["ValidateMessage"] != null)
-    {
-        <br />
-        <br />
-        <label>@ViewData["ValidateMessage"]</label>
-    }
-
-</form>
+                @if (ViewData["ValidateMessage"] != null)
+                {
+                    <br />
+                    <br />
+                    <label>@ViewData["ValidateMessage"]</label>
+                }
+            </form>
+        </div>
+    </div>
+</body>
+</html>

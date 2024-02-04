@@ -53,5 +53,81 @@ body {
 .btn-header {
   display: flex;
   justify-content: space-between;
-  
+
+}
+.body-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-form {
+  padding-top: 7%;
+}
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  width: 24em;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.label-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input input {
+  border-radius: 1vh;
+  height: 3em;
+  border-color: #969696;
+}
+
+.form-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-login {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-radius: 0.4em;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0.5em;
+  width: 10em;
+  border: none;
+}
+
+.btn-login:hover {
+  background-color: #1f84ef;
+}
+
+.btn-login:focus, .btn-login:active:focus, .form-input input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.20rem #258cfb;
+}
+
+.label-redirect {
+  display: flex;
+  column-gap: 1em;
+}
+
+.redirect-a {
+  font-size: 0.8em;
+  color: #969696;
+  align-self: flex-end;
 }
