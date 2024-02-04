@@ -10,3 +10,6 @@ dotnet tool update --global dotnet-ef
 dotnet build
 dotnet ef migrations add CreateDatabase
 dotnet ef database update
+dotnet add package Microsoft.AspNetCore.Authentication.Cookies
+dotnet add package Microsoft.AspNetCore.Authentication
+dotnet add package Microsoft.AspNet.Identity.Owin

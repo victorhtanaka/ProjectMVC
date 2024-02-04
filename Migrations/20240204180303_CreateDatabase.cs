@@ -42,15 +42,14 @@ namespace ProjectMVC.Migrations
                 name: "AdminInfos",
                 columns: table => new
                 {
-                    CodAdmin = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
                     LoginAdmin = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     SenhaAdmin = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    RememberMe = table.Column<bool>(type: "bit", nullable: false),
                     FkFilialCodFilial = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AdminInfos", x => x.CodAdmin);
+                    table.PrimaryKey("PK_AdminInfos", x => x.LoginAdmin);
                 });
 
             migrationBuilder.CreateTable(

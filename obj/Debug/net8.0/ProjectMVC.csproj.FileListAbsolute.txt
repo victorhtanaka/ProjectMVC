@@ -142,3 +142,10 @@ C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Swashbuckle.AspNe
 C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\victo\OneDrive\Documentos\ProjectMVC\obj\Debug\net8.0\ProjectMVC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Microsoft.Owin.dll
+C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Microsoft.Owin.Security.dll
+C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Microsoft.Owin.Security.Cookies.dll
+C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Microsoft.Owin.Security.OAuth.dll
+C:\Users\victo\OneDrive\Documentos\ProjectMVC\bin\Debug\net8.0\Owin.dll

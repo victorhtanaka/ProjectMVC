@@ -1,11 +1,12 @@
 using System.Diagnostics;
 using System.Dynamic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
 using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers;
-
+[Authorize]
 public class FuncaoController : Controller
 {
     private readonly ProjectContext _db;

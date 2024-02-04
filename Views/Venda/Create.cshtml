@@ -1,0 +1,73 @@
+@model Venda;
+@{
+    ViewData["Title"] = "Adicionar Venda";
+}
+@{
+
+    IEnumerable<Cliente>? Clientes = ViewData["Clientes"] as IEnumerable<Cliente>;
+    IEnumerable<Carro>? Carros = ViewData["Carros"] as IEnumerable<Carro>;
+    IEnumerable<Funcionario>? funcionarios = ViewData["Funcionarios"] as IEnumerable<Funcionario>;
+}
+<h1>Criar Venda</h1>
+<form asp-action="CriarVenda" asp-controller="Venda" method="post">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="form-group">
+                <label>Data da venda:</label>
+                <input asp-for="DataVenda" type="date" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Ultima revisão:</label>
+                <input asp-for="UltimaRevisao" type="date" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Cliente:</label>
+                <select asp-for="FkClienteCodCliente" class="form-control" required>
+                    @foreach(var Cliente in ViewData["Clientes"] as List<Cliente>)
+                    {
+                        <option value="@Cliente.CodCliente">@Cliente.NomeCliente</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Carro:</label>
+                <select asp-for="FkCarroCodCarro" class="form-control" required>
+                    @foreach(var Carro in ViewData["Carros"] as List<Carro>)
+                    {
+                        <option value="@Carro.CodCarro">@Carro.ModeloCarro</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Vendedor:</label>
+                <select asp-for="FkFuncionarioCodFuncionario" class="form-control" required>
+                    @foreach(var Carro in ViewData["Funcoes"] as List<Carro>)
+                    {
+                        <option value="@Carro.CodCarro">@Carro.ModeloCarro</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <div asp-validation-summary="All" class="text-danger"></div>
+            </div>
+            
+            <div class="card-footer">
+                <center>
+                    <button type="submit" class="btn-primary">Adicionar Funcionario</button>
+                    <button type="reset" asp-action="Get" asp-controller="Funcionario" class="btn-cancelar">Cancelar</button>
+                </center>
+            </div>
+
+        </div>
+
+    </div>
+
+</form>

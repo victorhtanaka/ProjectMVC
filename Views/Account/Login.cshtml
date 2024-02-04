@@ -1,0 +1,27 @@
+@model ProjectMVC.Models.AdminInfo
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+<form asp-controller="Account" asp-action="Login" method="post">
+    <h1>Login</h1>
+    <input type="text" placeholder="Login" asp-for="LoginAdmin"/>
+    <input type="password" placeholder="Senha" asp-for="SenhaAdmin"/>
+
+    <label>
+        <input type="checkbox" asp-for="RememberMe" />
+        Keep me logged In.
+    </label>
+    <button type="submit">Login</button>
+
+    @if (ViewData["ValidateMessage"] != null)
+    {
+        <br />
+        <br />
+        <label>@ViewData["ValidateMessage"]</label>
+    }
+
+</form>

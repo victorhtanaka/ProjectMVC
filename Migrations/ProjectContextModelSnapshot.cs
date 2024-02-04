@@ -61,25 +61,21 @@ namespace ProjectMVC.Migrations
 
             modelBuilder.Entity("ProjectMVC.Models.AdminInfo", b =>
                 {
-                    b.Property<int>("CodAdmin")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CodAdmin"));
+                    b.Property<string>("LoginAdmin")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<int>("FkFilialCodFilial")
                         .HasColumnType("int");
 
-                    b.Property<string>("LoginAdmin")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                    b.Property<bool>("RememberMe")
+                        .HasColumnType("bit");
 
                     b.Property<string>("SenhaAdmin")
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.HasKey("CodAdmin");
+                    b.HasKey("LoginAdmin");
 
                     b.ToTable("AdminInfos");
                 });

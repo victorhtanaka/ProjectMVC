@@ -31,8 +31,6 @@ public class ServicoController : Controller
         {
             return NotFound();
         }
-        ViewData["Servicos"] = _db.Servicos.ToList();
-        ViewData["Funcoes"] = _db.Funcoes.ToList();
 
         return View(Servico);
     }
@@ -92,8 +90,6 @@ public class ServicoController : Controller
         {
             return NotFound();
         }
-        ViewData["Servicos"] = _db.Servicos.ToList();
-        ViewData["Funcoes"] = _db.Funcoes.ToList();
 
         return View(Servico);
     }
