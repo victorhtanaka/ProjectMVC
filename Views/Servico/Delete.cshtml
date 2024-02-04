@@ -1,0 +1,41 @@
+@model Servico;
+@{
+    ViewData["Title"] = "Deletar Serviço";
+}
+
+<h1>Deletar Serviço</h1>
+<form asp-action="DeletarServico" asp-controller="Servico" method="post">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label>Codigo:</label>
+                <input asp-for="CodServico" type="text" class="form-control" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Nome:</label>
+                <input asp-for="NomeServico" type="text" class="form-control" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Descrição:</label>
+                <input asp-for="DescServico" type="text" class="form-control" readonly>
+            </div>
+
+            <div class="form-group">
+                <div asp-validation-summary="All" class="text-danger"></div>
+            </div>
+            <div class="card-footer">
+                <center>
+                    <button type="submit" class="btn-primary">Deletar Servico</button>
+                    <button type="reset" asp-action="Get" asp-controller="Servico" class="btn-cancelar">Cancelar</button>
+                </center>
+            </div>
+
+        </div>
+
+    </div>
+
+</form>
