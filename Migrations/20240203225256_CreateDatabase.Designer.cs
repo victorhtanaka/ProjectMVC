@@ -12,7 +12,7 @@ using ProjectMVC.Models;
 namespace ProjectMVC.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20240203203204_CreateDatabase")]
+    [Migration("20240203225256_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />

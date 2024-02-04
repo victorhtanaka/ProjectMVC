@@ -35,8 +35,8 @@
             <tbody id="tabelaCarros">
                 @foreach (var item in Model)
                 {
-                    <tr data-carro-id="@item.CodCarro">
-                        <td id="nome-td">@item.ModeloCarro</td>
+                    <tr>
+                        <td>@item.ModeloCarro</td>
                         <td>@item.MarcaCarro</td>
                         <td>@item.AnoCarro</td>
                         <td>@item.CorCarro</td>
@@ -78,7 +78,6 @@
 
         for (var i = 1; i < linhas.length; i++) { // Começa de 1 para pular o cabeçalho
             var colunaNome = linhas[i].getElementsByTagName("td")[0].textContent.toLowerCase();
-            var item = linhas[i].getAttribute("data-carro-id");
 
             if (colunaNome.includes(nomePesquisa) && item) {
                 linhas[i].style.display = "";
