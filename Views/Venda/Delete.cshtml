@@ -1,13 +1,11 @@
 @model Venda;
 @{
     ViewData["Title"] = "Deletar Venda";
-}
-@{
-
     IEnumerable<Cliente>? Clientes = ViewData["Clientes"] as IEnumerable<Cliente>;
     IEnumerable<Carro>? Carros = ViewData["Carros"] as IEnumerable<Carro>;
     IEnumerable<Funcionario>? funcionarios = ViewData["Funcionarios"] as IEnumerable<Funcionario>;
 }
+
 <h1>Deletar Venda</h1>
 <form asp-action="DeletarVenda" asp-controller="Venda" method="post">
 

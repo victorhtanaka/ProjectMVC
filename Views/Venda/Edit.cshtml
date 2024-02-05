@@ -55,9 +55,9 @@
             <div class="form-group">
                 <label>Vendedor:</label>
                 <select asp-for="FkFuncionarioCodFuncionario" class="form-control" readonly>
-                    @foreach(var Carro in ViewData["Funcoes"] as List<Carro>)
+                    @foreach(var Funcionario in ViewData["Funcionarios"] as List<Funcionario>)
                     {
-                        <option value="@Carro.CodCarro">@Carro.ModeloCarro</option>
+                        <option value="@Funcionario.CodFuncionario">@Funcionario.CodFuncionario</option>
                     }
                 </select>
             </div>

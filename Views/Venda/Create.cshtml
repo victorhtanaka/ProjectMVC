@@ -6,7 +6,7 @@
 
     IEnumerable<Cliente>? Clientes = ViewData["Clientes"] as IEnumerable<Cliente>;
     IEnumerable<Carro>? Carros = ViewData["Carros"] as IEnumerable<Carro>;
-    IEnumerable<Funcionario>? funcionarios = ViewData["Funcionarios"] as IEnumerable<Funcionario>;
+    IEnumerable<Funcionario>? Funcionarios = ViewData["Funcionarios"] as IEnumerable<Funcionario>;
 }
 <h1>Criar Venda</h1>
 <form asp-action="CriarVenda" asp-controller="Venda" method="post">
@@ -51,9 +51,9 @@
             <div class="form-group">
                 <label>Vendedor:</label>
                 <select asp-for="FkFuncionarioCodFuncionario" class="form-control" required>
-                    @foreach(var Carro in ViewData["Funcoes"] as List<Carro>)
+                    @foreach(var Funcionario in ViewData["Funcionarios"] as List<Funcionario>)
                     {
-                        <option value="@Carro.CodCarro">@Carro.ModeloCarro</option>
+                        <option value="@Funcionario.CodFuncionario">@Funcionario.NomeFuncionario</option>
                     }
                 </select>
             </div>

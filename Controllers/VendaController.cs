@@ -19,6 +19,9 @@ public class VendaController : Controller
     public IActionResult Get()
     {
         var Vendas = _db.Vendas.ToList();
+        ViewData["Clientes"] = _db.Clientes.ToList();
+        ViewData["Carros"] = _db.Carros.ToList();
+        ViewData["Funcionarios"] = _db.Funcionarios.ToList();
         return View(Vendas);
     }
 
