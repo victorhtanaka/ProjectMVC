@@ -1,0 +1,46 @@
+@model AcessorioCarro;
+@{
+    ViewData["Title"] = "Add Carro";
+}
+@{
+    Carro carro = ViewData["Carro"] as Carro;
+    IEnumerable<Acessorio>? Acessorios = ViewData["Acessorios"] as IEnumerable<Acessorio>;
+}
+<h1>Adicionar acessório</h1>
+<form asp-action="CriarAcessorioCarro" asp-controller="AcessorioCarro" method="post">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="form-group">
+                <label>Acessorio:</label>
+                <select asp-for="FkAcessorioCodAcessorio" class="form-control" required>
+                    @foreach(Acessorio Acessorio in ViewData["Acessorios"] as List<Acessorio>)
+                    {
+                        <option value="@Acessorio.CodAcessorio">@Acessorio.NomeAcessorio</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Código do carro:</label>
+                <input readonly asp-for="FkCarroCodCarro" value="@carro.CodCarro" type="text" pattern="[A-Za-z0-9]{3}[A-Za-z0-9]{6}[A-Za-z0-9]{2}[A-Za-z0-9]{6}" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <div asp-validation-summary="All" class="text-danger"></div>
+            </div>
+
+            <div class="card-footer">
+                <center>
+                    <button type="submit" class="btn-primary">Adicionar acessório</button>
+                    <button asp-action="Get" asp-controller="AcessorioCarro" class="btn-cancelar">Cancelar</button>
+                </center>
+            </div>
+
+        </div>
+
+    </div>
+
+</form>
