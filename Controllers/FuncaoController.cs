@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.TagHelpers;
 using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers;
+
 [Authorize]
 public class FuncaoController : Controller
 {

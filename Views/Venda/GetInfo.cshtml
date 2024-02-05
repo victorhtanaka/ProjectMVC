@@ -1,9 +1,11 @@
 @model Venda;
 @{
     ViewData["Title"] = "Ver Venda";
+    
     IEnumerable<Cliente>? Clientes = ViewData["Clientes"] as IEnumerable<Cliente>;
     IEnumerable<Carro>? Carros = ViewData["Carros"] as IEnumerable<Carro>;
     IEnumerable<Funcionario>? Funcionarios = ViewData["Funcionarios"] as IEnumerable<Funcionario>;
+
     Cliente? ClienteDaVenda = Clientes.FirstOrDefault(c => c.CodCliente == Model.FkClienteCodCliente);
     Carro? CarroDaVenda = Carros.FirstOrDefault(c => c.CodCarro == Model.FkCarroCodCarro);
     Funcionario? FuncionarioDaVenda = Funcionarios.FirstOrDefault(f => f.CodFuncionario == Model.FkFuncionarioCodFuncionario);

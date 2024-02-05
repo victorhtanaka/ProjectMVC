@@ -4,8 +4,10 @@ using ProjectMVC.Models;
 using Microsoft.AspNet.Identity.Owin;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;  // Certifique-se de substituir pelo namespace correto do seu modelo de usuário
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;  // Certifique-se de substituir pelo namespace correto do seu modelo de usuário
 
+[Authorize]
 public class AccountController : Controller
 {
     private readonly ProjectContext _db;
