@@ -21,12 +21,12 @@
 
             <div class="form-group">
                 <label>Data da venda:</label>
-                <input asp-for="DataVenda" type="date" class="form-control" readonly>
+                <input asp-for="DataVenda" type="date" class="form-control" required>
             </div>
 
             <div class="form-group">
                 <label>Ultima revisão:</label>
-                <input asp-for="UltimaRevisao" type="date" class="form-control" readonly>
+                <input asp-for="UltimaRevisao" type="date" class="form-control" required>
             </div>
 
             <div class="form-group">
@@ -34,17 +34,17 @@
                     <label>Cliente:</label>
                     <a class="redirect-a" asp-action="Create" asp-controller="Cliente">Criar Cliente</a>
                 </div>
-                <select asp-for="FkClienteCodCliente" class="form-control" readonly>
+                <select asp-for="FkClienteCodCliente" class="form-control" required>
                     @foreach(var Cliente in ViewData["Clientes"] as List<Cliente>)
                     {
-                        <option value="@Cliente.CodCliente">@Cliente.NomeCliente</option>
+                        <option value="@Cliente.CodCliente">@Cliente.CPFCliente</option>
                     }
                 </select>
             </div>
 
             <div class="form-group">
                 <label>Carro:</label>
-                <select asp-for="FkCarroCodCarro" class="form-control" readonly>
+                <select asp-for="FkCarroCodCarro" class="form-control" required>
                     @foreach(var Carro in ViewData["Carros"] as List<Carro>)
                     {
                         <option value="@Carro.CodCarro">@Carro.ModeloCarro</option>
@@ -54,7 +54,7 @@
 
             <div class="form-group">
                 <label>Vendedor:</label>
-                <select asp-for="FkFuncionarioCodFuncionario" class="form-control" readonly>
+                <select asp-for="FkFuncionarioCodFuncionario" class="form-control" required>
                     @foreach(var Funcionario in ViewData["Funcionarios"] as List<Funcionario>)
                     {
                         <option value="@Funcionario.CodFuncionario">@Funcionario.CodFuncionario</option>

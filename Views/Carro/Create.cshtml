@@ -50,7 +50,7 @@
             <div class="form-group">
                 <div class="label-redirect">
                     <label>Filial:</label>
-                    <a class="redirect-a" asp-action="Create" asp-controller="Filial">Criar Filial</a>
+                    <a class="redirect-a" asp-action="Create" asp-controller="Filial" target="_blank">Criar Filial</a>
                 </div>
                 <select asp-for="FkFilialCodFilial" class="form-control" required>
                     @foreach(var filial in ViewData["Filiais"] as List<Filial>)

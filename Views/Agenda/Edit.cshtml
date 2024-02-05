@@ -1,0 +1,87 @@
+@model Agenda;
+@{
+    ViewData["Title"] = "Editar Agendamento";
+    IEnumerable<Cliente>? Clientes = ViewData["Clientes"] as IEnumerable<Cliente>;
+    IEnumerable<Servico>? Servicos = ViewData["Servicos"] as IEnumerable<Servico>;
+    IEnumerable<Funcionario>? funcionarios = ViewData["Funcionarios"] as IEnumerable<Funcionario>;
+}
+
+<h1>Editar Agendamento</h1>
+<form asp-action="EditarAgenda" asp-controller="Agenda" method="post">
+
+    <div class="row">
+
+            <div class="form-group">
+                <label>Codigo Agendamento:</label>
+                <input asp-for="CodAgenda" type="text" class="form-control" readonly>
+            </div>
+
+        <div class="form-group">
+                <label>Data Agendamento:</label>
+                <input asp-for="DataAgenda" type="date" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Modelo do veiculo:</label>
+                <input asp-for="Modelo" type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Ano do veiculo:</label>
+                <input asp-for="Ano" type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Quilometragem:</label>
+                <input asp-for="Km" type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <div class="label-redirect">
+                    <label>Cpf Cliente:</label>
+                    <a class="redirect-a" asp-action="Create" asp-controller="Cliente" target="_blank" rel="noopener noreferrer">Criar Cliente</a>
+                </div>
+                <select asp-for="FkClienteCodCliente" class="form-control" required>
+                    @foreach(var Cliente in ViewData["Clientes"] as List<Cliente>)
+                    {
+                        <option value="@Cliente.CodCliente">@Cliente.CPFCliente</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Servico:</label>
+                <select asp-for="FkServicoCodServico" class="form-control" required>
+                    @foreach(var Servico in ViewData["Servicos"] as List<Servico>)
+                    {
+                        <option value="@Servico.CodServico">@Servico.NomeServico</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Funcionario:</label>
+                <select asp-for="FkFuncionarioCodFuncionario" class="form-control" required>
+                    @foreach(var Funcionario in ViewData["Funcionarios"] as List<Funcionario>)
+                    {
+                        <option value="@Funcionario.CodFuncionario">@Funcionario.NomeFuncionario</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <div asp-validation-summary="All" class="text-danger"></div>
+            </div>
+            
+            <div class="card-footer">
+                <center>
+                    <button type="submit" class="btn-primary">Editar Agendamento</button>
+                    <button type="reset" asp-action="Get" asp-controller="Agenda" class="btn-cancelar">Cancelar</button>
+                </center>
+            </div>
+
+        </div>
+
+    </div>
+
+</form>

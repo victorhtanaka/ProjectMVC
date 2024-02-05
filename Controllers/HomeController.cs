@@ -5,6 +5,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using System.Data.Common;
 
 
 namespace ProjectMVC.Controllers
@@ -13,10 +14,12 @@ namespace ProjectMVC.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ProjectContext _db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ProjectContext db)
         {
             _logger = logger;
+            _db = db;
         }
 
         public IActionResult Index()
@@ -33,6 +36,15 @@ namespace ProjectMVC.Controllers
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login","Account");
+        }
+
+        public IActionResult RelatorioMensal()
+        {
+            ViewData["Vendas"] = _db.Vendas.ToList();
+            ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+            ViewData["Filiais"] = _db.Filiais.ToList();
+            ViewData["Carros"] = _db.Carros.ToList();
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

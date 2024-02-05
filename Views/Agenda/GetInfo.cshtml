@@ -1,0 +1,95 @@
+@model Agenda;
+@{
+    ViewData["Title"] = "Ver Agendamento";
+    
+    IEnumerable<Cliente>? Clientes = ViewData["Clientes"] as IEnumerable<Cliente>;
+    IEnumerable<Servico>? Servicos = ViewData["Servicos"] as IEnumerable<Servico>;
+    IEnumerable<Funcionario>? Funcionarios = ViewData["Funcionarios"] as IEnumerable<Funcionario>;
+
+    Cliente? ClienteDaAgenda = Clientes.FirstOrDefault(c => c.CodCliente == Model.FkClienteCodCliente);
+    Servico? ServicoDaAgenda = Servicos.FirstOrDefault(c => c.CodServico == Model.FkServicoCodServico);
+    Funcionario? FuncionarioDaAgenda = Funcionarios.FirstOrDefault(f => f.CodFuncionario == Model.FkFuncionarioCodFuncionario);
+}
+
+<h1>Informacoes Detalhadas</h1><br>
+<div class="row">
+
+    <div class="col-lg-12">
+        <h2>Dados gerais</h2>
+        <div class="dados-Agenda">
+
+            <div class="form-group">
+                <label>Codigo:</label>
+                <p>@Model.CodAgenda</p>
+            </div>
+
+            <div class="form-group">
+                <label>Data da Agenda:</label>
+                <p>@Model.DataAgenda</p>
+            </div>
+
+        </div><br>
+
+        <h2>Funcionario da Agenda</h2>
+
+        <div class="func-Agenda">
+            <div class="form-group">
+                <label>Codigo funcionario:</label>
+                <p>@FuncionarioDaAgenda.CodFuncionario</p>
+            </div>
+            <div class="form-group">
+                <label>Nome vendedor:</label>
+                <p>@FuncionarioDaAgenda.NomeFuncionario</p>
+            </div>
+            <div class="form-group">
+                <label>Cpf vendedor:</label>
+                <p>@FuncionarioDaAgenda.CPFFuncionario</p>
+            </div>
+
+        </div><br>
+
+        <h2>Cliente da Agenda</h2>
+
+        <div class="cliente-Agenda">
+
+            <div class="form-group">
+                <label>Codigo cliente:</label>
+                <p>@ClienteDaAgenda.CodCliente</p>
+            </div>
+            <div class="form-group">
+                <label>Nome cliente:</label>
+                <p>@ClienteDaAgenda.NomeCliente</p>
+            </div>
+            <div class="form-group">
+                <label>Cpf cliente:</label>
+                <p>@ClienteDaAgenda.CPFCliente</p>
+            </div>
+            <div class="form-group">
+                <label>Tel cliente:</label>
+                <p>@ClienteDaAgenda.TelCliente</p>
+            </div>
+            <div class="form-group">
+                <label>Email cliente:</label>
+                <p>@ClienteDaAgenda.EmailCliente</p>
+            </div>
+
+        </div><br>
+
+        <h2>Servico da Agenda</h2>
+
+        <div class="Servico-Agenda">
+
+            <div class="form-group">
+                <label>Codigo Servico:</label>
+                <p>@ServicoDaAgenda.CodServico</p>
+            </div>
+            <div class="form-group">
+                <label>Chassi Servico:</label>
+                <p>@ServicoDaAgenda.DescServico</p>
+            </div>
+
+        </div>
+    
+        </div>
+    </div>
+</div>

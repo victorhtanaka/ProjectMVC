@@ -22,7 +22,7 @@ public class AgendaController : Controller
     {
         var Agendas = _db.Agendas.ToList();
         ViewData["Clientes"] = _db.Clientes.ToList();
-        ViewData["Carros"] = _db.Carros.ToList();
+        ViewData["Servicos"] = _db.Servicos.ToList();
         ViewData["Funcionarios"] = _db.Funcionarios.ToList();
         return View(Agendas);
     }
@@ -37,7 +37,7 @@ public class AgendaController : Controller
             return NotFound();
         }
         ViewData["Clientes"] = _db.Clientes.ToList();
-        ViewData["Carros"] = _db.Carros.ToList();
+        ViewData["Servicos"] = _db.Servicos.ToList();
         ViewData["Funcionarios"] = _db.Funcionarios.ToList();
 
         return View(Agenda);
@@ -49,7 +49,7 @@ public class AgendaController : Controller
 
         ViewData["Agenda"] = new Agenda();
         ViewData["Clientes"] = _db.Clientes.ToList();
-        ViewData["Carros"] = _db.Carros.ToList();
+        ViewData["Servicos"] = _db.Servicos.ToList();
         ViewData["Funcionarios"] = _db.Funcionarios.ToList();
 
         return View();
@@ -74,7 +74,7 @@ public class AgendaController : Controller
             return NotFound();
         }
         ViewData["Clientes"] = _db.Clientes.ToList();
-        ViewData["Carros"] = _db.Carros.ToList();
+        ViewData["Servicos"] = _db.Servicos.ToList();
         ViewData["Funcionarios"] = _db.Funcionarios.ToList();
 
         return View(Agenda);
@@ -105,7 +105,7 @@ public class AgendaController : Controller
             return NotFound();
         }
         ViewData["Clientes"] = _db.Clientes.ToList();
-        ViewData["Carros"] = _db.Carros.ToList();
+        ViewData["Servicos"] = _db.Servicos.ToList();
         ViewData["Funcionarios"] = _db.Funcionarios.ToList();
 
         return View(Agenda);

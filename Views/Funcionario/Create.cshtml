@@ -3,7 +3,8 @@
     ViewData["Title"] = "Adicionar Funcionario";
 }
 @{
-
+    IEnumerable<Carro>? Carros = ViewData["Carros"] as IEnumerable<Carro>;
+    IEnumerable<Funcionario>? Funcionarios = ViewData["Funcionarios"] as IEnumerable<Funcionario>;
     IEnumerable<Filial>? Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
     IEnumerable<Funcao>? Funcoes = ViewData["Funcoes"] as IEnumerable<Funcao>;
 }
@@ -65,7 +66,7 @@
             <div class="form-group">
                 <div class="label-redirect">
                     <label>Funcao:</label>
-                    <a class="redirect-a" asp-action="Create" asp-controller="Funcao">Criar Funcao</a>
+                    <a class="redirect-a" asp-action="Create" asp-controller="Funcao" target="_blank">Criar Funcao</a>
                 </div>
                 <select asp-for="FkFuncaoCodFuncao" class="form-control" required>
                     @foreach(var funcao in ViewData["Funcoes"] as List<Funcao>)

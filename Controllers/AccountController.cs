@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;  // Certifique-se de substituir pelo namespace correto do seu modelo de usuário
 
-[Authorize]
 public class AccountController : Controller
 {
     private readonly ProjectContext _db;
