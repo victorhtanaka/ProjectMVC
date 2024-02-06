@@ -20,6 +20,7 @@ public class CarroController : Controller
     // READ
     public IActionResult Get()
     {
+        throw new Exception("Error in Details View");
         var carros = _db.Carros.ToList();
         return View(carros);
     }

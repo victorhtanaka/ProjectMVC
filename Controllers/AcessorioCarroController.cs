@@ -60,10 +60,10 @@ public class AcessorioCarroController : Controller
     }
 
     // DELETE
-    public IActionResult Delete(int CodAcessorioCarro)
+    public IActionResult Delete(int id)
     {
 
-        var acessorioCarro = _db.AcessoriosCarros.Find(CodAcessorioCarro);
+        var acessorioCarro = _db.AcessoriosCarros.Find(id);
 
         if (acessorioCarro == null)
         {

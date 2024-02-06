@@ -23,7 +23,6 @@ public class AccountController : Controller
         if (claimUser.Identity.IsAuthenticated)
             return RedirectToAction("Index", "Home");
 
-
         return View();
     }
 
