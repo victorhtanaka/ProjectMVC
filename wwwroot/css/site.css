@@ -131,3 +131,13 @@ body {
   color: #969696;
   align-self: flex-end;
 }
+
+.date-range {
+  display: flex;
+  column-gap: 1em;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: #fff;
+}

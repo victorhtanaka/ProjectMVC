@@ -10,7 +10,8 @@ namespace ProjectMVC.Models
 
         public decimal Valor { get; set; }
 
-        [StringLength(200)]
+        [Required(ErrorMessage="A descricao do relatorio nao pode ser vazia.")]
+        [StringLength(200, MinimumLength = 1, ErrorMessage = "A descricao do relatorio deve possuir no minimo 1 e no maximo 200 caracteres.")]
         public string? DescRelatorio { get; set; }
 
         [ForeignKey("Agenda")]

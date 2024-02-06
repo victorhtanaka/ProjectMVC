@@ -10,7 +10,7 @@
 
 <h1>Relatorio de Salarios</h1>
 <div class="date-range">
-    <p>Data Inicial: @Dates.DataIni  </p>
+    <p>Data Inicial: @Dates.DataIni</p>
     <p>Data Final: @Dates.DataFin</p>
 </div>
 
@@ -22,6 +22,7 @@
                 <tr>
                     <td>Filial</td>
                     <td>Funcionario</td>
+                    <td>Vendas</td>
                     <td>Salário</td>
                 </tr>
             </thead>
@@ -42,6 +43,22 @@
                             }
                         </td>
                         <td>@func.NomeFuncionario</td>
+                        <td>
+                            @{
+                                int vendas = 0;
+                                foreach (Venda v in Vendas)
+                                {
+                                    if (v.FkFuncionarioCodFuncionario == func.CodFuncionario)
+                                    {
+                                        if (v.DataVenda <= Dates.DataFin && v.DataVenda >= Dates.DataIni)
+                                        {
+                                            vendas += 1;
+                                        }
+                                    }
+                                }
+                            }
+                            @vendas
+                        </td>
                         <td>
                             @{
                                 decimal salarioFinal = func.SalarioFuncionario;

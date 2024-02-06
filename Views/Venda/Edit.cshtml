@@ -57,7 +57,7 @@
                 <select asp-for="FkFuncionarioCodFuncionario" class="form-control" required>
                     @foreach(var Funcionario in ViewData["Funcionarios"] as List<Funcionario>)
                     {
-                        <option value="@Funcionario.CodFuncionario">@Funcionario.CodFuncionario</option>
+                        <option value="@Funcionario.CodFuncionario"><p>@Funcionario.CodFuncionario</p> - <p>@Funcionario.NomeFuncionario</p></option>
                     }
                 </select>
             </div>
@@ -69,7 +69,7 @@
             <div class="card-footer">
                 <center>
                     <button type="submit" class="btn-primary">Editar Venda</button>
-                    <button type="reset" asp-action="Get" asp-controller="Venda" class="btn-cancelar">Cancelar</button>
+                    <button class="btn-secondary"><a asp-action="Get" asp-controller="Venda">Cancelar</a></button>
                 </center>
             </div>
 

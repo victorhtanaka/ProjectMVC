@@ -59,7 +59,7 @@ namespace ProjectMVC.Migrations
                     CodAgenda = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DataAgenda = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Modelo = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Modelo = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Ano = table.Column<int>(type: "int", nullable: false),
                     Km = table.Column<float>(type: "real", nullable: false),
                     FkFuncionarioCodFuncionario = table.Column<int>(type: "int", nullable: false),

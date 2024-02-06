@@ -182,10 +182,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Salario/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJpb1xHZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -216,6 +212,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Shared/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Shared/_ValidationScriptsPartial.cshtml]

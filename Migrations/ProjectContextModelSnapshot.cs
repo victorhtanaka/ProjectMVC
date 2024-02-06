@@ -107,6 +107,7 @@ namespace ProjectMVC.Migrations
                         .HasColumnType("real");
 
                     b.Property<string>("Modelo")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 

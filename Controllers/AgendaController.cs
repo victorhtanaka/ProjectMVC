@@ -46,22 +46,24 @@ public class AgendaController : Controller
     // CREATE
     public IActionResult Create()
     {
-
-        ViewData["Agenda"] = new Agenda();
         ViewData["Clientes"] = _db.Clientes.ToList();
         ViewData["Servicos"] = _db.Servicos.ToList();
         ViewData["Funcionarios"] = _db.Funcionarios.ToList();
 
-        return View();
+        return View(new Agenda());
     }
 
     [HttpPost]
-    public IActionResult CriarAgenda(Agenda Agenda)
+    public IActionResult CriarAgenda(Agenda agenda)
     {
-        _db.Agendas.Add(Agenda);
-        _db.SaveChanges();
+        if (ModelState.IsValid)
+        {
+            _db.Agendas.Add(agenda);
+            _db.SaveChanges();
 
-        return RedirectToAction("Get");
+            return RedirectToAction("Get");
+        }
+        return View("Create", agenda);
     }
 
     // UPDATE

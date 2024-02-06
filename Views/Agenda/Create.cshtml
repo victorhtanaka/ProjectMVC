@@ -3,9 +3,9 @@
     ViewData["Title"] = "Adicionar Agendamento";
 }
 @{
-    IEnumerable<Cliente>? Clientes = ViewData["Clientes"] as IEnumerable<Cliente>;
-    IEnumerable<Servico>? Servicos = ViewData["Servicos"] as IEnumerable<Servico>;
-    IEnumerable<Funcionario>? Funcionarios = ViewData["Funcionarios"] as IEnumerable<Funcionario>;
+    List<Cliente>? Clientes = ViewData["Clientes"] as List<Cliente>;
+    List<Servico>? Servicos = ViewData["Servicos"] as List<Servico>;
+    List<Funcionario>? Funcionarios = ViewData["Funcionarios"] as List<Funcionario>;
 }
 <h1>Criar Agendamento</h1>
 <form asp-action="CriarAgenda" asp-controller="Agenda" method="post">
@@ -16,12 +16,12 @@
 
             <div class="form-group">
                 <label>Data Agendamento:</label>
-                <input asp-for="DataAgenda" type="date" class="form-control" required>
+                <input id="dataInput" value="" min="" asp-for="DataAgenda" type="datetime-local" class="form-control" required>
             </div>
 
             <div class="form-group">
                 <label>Modelo do veiculo:</label>
-                <input asp-for="Modelo" type="text" class="form-control" required>
+                <input asp asp-for="Modelo" type="text" class="form-control" required>
             </div>
 
             <div class="form-group">
@@ -69,7 +69,7 @@
             <div class="card-footer">
                 <center>
                     <button type="submit" class="btn-primary">Adicionar Agendamento</button>
-                    <button type="reset" asp-action="Get" asp-controller="Agenda" class="btn-cancelar">Cancelar</button>
+                    <button class="btn-secondary"><a asp-action="Get" asp-controller="Agenda">Cancelar</a></button>
                 </center>
             </div>
 
@@ -78,3 +78,23 @@
     </div>
 
 </form>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Obtenha o elemento de input usando o ID
+        var dataInput = document.getElementById('dataInput');
+
+        // Obtenha a data e hora atual no fuso horário local
+        var dataAtual = new Date();
+        var dataAtualLocal = new Date(dataAtual.getTime() - dataAtual.getTimezoneOffset() * 60000);
+
+        // Arredonda para o próximo múltiplo de 15 minutos
+        var minutosAtual = dataAtualLocal.getMinutes();
+
+        // Configura a data mínima para ser maior que a data e hora atual
+        dataAtualLocal.setMinutes(minutosAtual);
+        dataInput.min = dataAtualLocal.toISOString().slice(0, -8);
+
+        // Configura o valor inicial para a data e hora atual
+        dataInput.value = dataAtualLocal.toISOString().slice(0, -8);
+    });
+</script>

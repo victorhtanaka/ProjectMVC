@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.Dynamic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers;
@@ -47,10 +48,14 @@ public class AcessorioController : Controller
     [HttpPost]
     public IActionResult CriarAcessorio(Acessorio acessorio)
     {
-        _db.Acessorios.Add(acessorio);
-        _db.SaveChanges();
+        if (ModelState.IsValid) 
+        {
+            _db.Acessorios.Add(acessorio);
+            _db.SaveChanges();
 
-        return RedirectToAction("Get");
+            return RedirectToAction("Get");
+        }
+        return View("Create", acessorio);
     }
 
     // UPDATE

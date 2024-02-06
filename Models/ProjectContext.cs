@@ -21,5 +21,45 @@ namespace ProjectMVC.Models
         {
             optionsBuilder.UseSqlServer(@"Server=DESKTOP-H6HOM7Q\SQLEXPRESS;Database=ProjectMVC;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True;");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Acessorio>()
+                .HasIndex(a => a.NomeAcessorio)
+                .IsUnique();
+
+            modelBuilder.Entity<Carro>()
+                .HasIndex(c => c.NumChassi)
+                .IsUnique();
+
+            modelBuilder.Entity<Cliente>()
+                .HasIndex(c => c.CPFCliente)
+                .IsUnique();
+
+            modelBuilder.Entity<Filial>()
+                .HasIndex(f => f.NomeFilial)
+                .IsUnique();
+
+            modelBuilder.Entity<Funcao>()
+                .HasIndex(f => f.NomeFuncao)
+                .IsUnique();
+
+            modelBuilder.Entity<Funcionario>()
+                .HasIndex(f => f.CPFFuncionario)
+                .IsUnique();
+
+            modelBuilder.Entity<Servico>()
+                .HasIndex(s => s.NomeServico)
+                .IsUnique();
+
+            modelBuilder.Entity<Funcionario>()
+                .HasIndex(f => f.CPFFuncionario)
+                .IsUnique();
+
+            modelBuilder.Entity<Agenda>()
+                .HasIndex(a => new {a.DataAgenda, a.FkFuncionarioCodFuncionario})
+                .IsUnique();
+
+        }
     }
 }

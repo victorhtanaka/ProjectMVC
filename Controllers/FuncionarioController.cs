@@ -43,20 +43,29 @@ public class FuncionarioController : Controller
     public IActionResult Create()
     {
 
-        ViewData["Funcionario"] = new Funcionario();
         ViewData["Filiais"] = _db.Filiais.ToList();
         ViewData["Funcoes"] = _db.Funcoes.ToList();
+        ViewData["Carros"] = _db.Carros.ToList();
+        ViewData["Funcionarios"] = _db.Funcionarios.ToList();
 
-        return View();
+        return View(new Funcionario());
     }
 
     [HttpPost]
     public IActionResult CriarFuncionario(Funcionario funcionario)
     {
-        _db.Funcionarios.Add(funcionario);
-        _db.SaveChanges();
+        if (ModelState.IsValid)
+        {
+            _db.Funcionarios.Add(funcionario);
+            _db.SaveChanges();
 
-        return RedirectToAction("Get");
+            return RedirectToAction("Get");
+        }
+        ViewData["Filiais"] = _db.Filiais.ToList();
+        ViewData["Funcoes"] = _db.Funcoes.ToList();
+        ViewData["Carros"] = _db.Carros.ToList();
+        ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+        return View("Create", funcionario);
     }
 
     // UPDATE

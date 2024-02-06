@@ -12,7 +12,7 @@ using ProjectMVC.Models;
 namespace ProjectMVC.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20240204180303_CreateDatabase")]
+    [Migration("20240206184345_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
@@ -110,6 +110,7 @@ namespace ProjectMVC.Migrations
                         .HasColumnType("real");
 
                     b.Property<string>("Modelo")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
