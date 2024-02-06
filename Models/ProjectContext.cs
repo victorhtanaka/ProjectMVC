@@ -52,10 +52,6 @@ namespace ProjectMVC.Models
                 .HasIndex(s => s.NomeServico)
                 .IsUnique();
 
-            modelBuilder.Entity<Funcionario>()
-                .HasIndex(f => f.CPFFuncionario)
-                .IsUnique();
-
             modelBuilder.Entity<Agenda>()
                 .HasIndex(a => new {a.DataAgenda, a.FkFuncionarioCodFuncionario})
                 .IsUnique();
