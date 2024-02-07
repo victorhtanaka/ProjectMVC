@@ -37,6 +37,9 @@ namespace ProjectMVC.Migrations
 
                     b.HasKey("CodAcessorio");
 
+                    b.HasIndex("NomeAcessorio")
+                        .IsUnique();
+
                     b.ToTable("Acessorios");
                 });
 
@@ -64,9 +67,6 @@ namespace ProjectMVC.Migrations
                     b.Property<string>("LoginAdmin")
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
-
-                    b.Property<int>("FkFilialCodFilial")
-                        .HasColumnType("int");
 
                     b.Property<bool>("RememberMe")
                         .HasColumnType("bit");
@@ -113,6 +113,9 @@ namespace ProjectMVC.Migrations
 
                     b.HasKey("CodAgenda");
 
+                    b.HasIndex("DataAgenda", "FkFuncionarioCodFuncionario")
+                        .IsUnique();
+
                     b.ToTable("Agendas");
                 });
 
@@ -156,6 +159,9 @@ namespace ProjectMVC.Migrations
 
                     b.HasKey("CodCarro");
 
+                    b.HasIndex("NumChassi")
+                        .IsUnique();
+
                     b.ToTable("Carros");
                 });
 
@@ -193,6 +199,10 @@ namespace ProjectMVC.Migrations
 
                     b.HasKey("CodCliente");
 
+                    b.HasIndex("CPFCliente")
+                        .IsUnique()
+                        .HasFilter("[CPFCliente] IS NOT NULL");
+
                     b.ToTable("Clientes");
                 });
 
@@ -204,12 +214,25 @@ namespace ProjectMVC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CodFilial"));
 
+                    b.Property<string>("EndFilial")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
                     b.Property<string>("NomeFilial")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("TelFilial")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
                     b.HasKey("CodFilial");
+
+                    b.HasIndex("NomeFilial")
+                        .IsUnique();
 
                     b.ToTable("Filiais");
                 });
@@ -233,6 +256,9 @@ namespace ProjectMVC.Migrations
 
                     b.HasKey("CodFuncao");
 
+                    b.HasIndex("NomeFuncao")
+                        .IsUnique();
+
                     b.ToTable("Funcoes");
                 });
 
@@ -245,6 +271,7 @@ namespace ProjectMVC.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CodFuncionario"));
 
                     b.Property<string>("CPFFuncionario")
+                        .IsRequired()
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
@@ -252,10 +279,12 @@ namespace ProjectMVC.Migrations
                         .HasColumnType("date");
 
                     b.Property<string>("EmailFuncionario")
+                        .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("EndFuncionario")
+                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
@@ -274,10 +303,14 @@ namespace ProjectMVC.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("TelFuncionario")
+                        .IsRequired()
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
                     b.HasKey("CodFuncionario");
+
+                    b.HasIndex("CPFFuncionario")
+                        .IsUnique();
 
                     b.ToTable("Funcionarios");
                 });
@@ -291,6 +324,7 @@ namespace ProjectMVC.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CodRelatorio"));
 
                     b.Property<string>("DescRelatorio")
+                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
@@ -314,6 +348,7 @@ namespace ProjectMVC.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CodServico"));
 
                     b.Property<string>("DescServico")
+                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -323,6 +358,9 @@ namespace ProjectMVC.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("CodServico");
+
+                    b.HasIndex("NomeServico")
+                        .IsUnique();
 
                     b.ToTable("Servicos");
                 });

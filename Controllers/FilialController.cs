@@ -42,19 +42,20 @@ public class FilialController : Controller
     // CREATE
     public IActionResult Create()
     {
-
-        ViewData["Filial"] = new Filial();
-
-        return View();
+        return View(new Filial());
     }
 
     [HttpPost]
     public IActionResult CriarFilial(Filial filial)
     {
-        _db.Filiais.Add(filial);
-        _db.SaveChanges();
+        if (ModelState.IsValid)
+        {
+            _db.Filiais.Add(filial);
+            _db.SaveChanges();
 
-        return RedirectToAction("Get");
+            return RedirectToAction("Get");
+        }
+        return View("Create", filial);
     }
 
     // UPDATE

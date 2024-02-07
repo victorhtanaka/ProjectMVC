@@ -26,7 +26,6 @@ public class CarroController : Controller
 
     public IActionResult GetInfo(int id)
     {
-
         var carro = _db.Carros.Find(id);
 
         if (carro == null)
@@ -41,20 +40,24 @@ public class CarroController : Controller
     // CREATE
     public IActionResult Create()
     {
-
-        ViewData["Carro"] = new Carro();
         ViewData["Filiais"] = _db.Filiais.ToList();
 
-        return View();
+        return View(new Carro());
     }
 
     [HttpPost]
     public IActionResult CriarCarro(Carro carro)
     {
-        _db.Carros.Add(carro);
-        _db.SaveChanges();
+        if (ModelState.IsValid)
+        {
+            _db.Carros.Add(carro);
+            _db.SaveChanges();
 
-        return RedirectToAction("Get");
+            return RedirectToAction("Get");
+        }
+        ViewData["Filiais"] = _db.Filiais.ToList();
+
+        return View("Create", carro);
     }
 
     // UPDATE
@@ -82,6 +85,7 @@ public class CarroController : Controller
 
             return RedirectToAction("Get");
         }
+        ViewData["Filiais"] = _db.Filiais.ToList();
 
         return View("Edit", carro);
     }

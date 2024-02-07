@@ -35,11 +35,18 @@
             </div>
 
             <div class="form-group">
-                <div class="label-redirect">
-                    <label>CPF cliente:</label>
-                    <a class="redirect-a" asp-action="Create" asp-controller="Cliente" target="_blank">Cliente sem registro?</a>
+                <label>CPF Cliente:</label>
+                <div class="dropdown">
+                    <div id="myDropdown" class="dropdown-content">
+                        <input type="text" placeholder="Pesquisar.." id="myInput" onkeyup="filterFunction()">
+                        <select asp-for="FkClienteCodCliente" class="form-control" required>
+                            @foreach(var Cliente in ViewData["Clientes"] as List<Cliente>)
+                            {
+                                <option value="@Cliente.CodCliente">@Cliente.CPFCliente</option>
+                            }
+                        </select>
+                    </div>
                 </div>
-                <input asp-for="FkClienteCodCliente" type="text" class="form-control" required>
             </div>
 
             <div class="form-group">
@@ -97,4 +104,20 @@
         // Configura o valor inicial para a data e hora atual
         dataInput.value = dataAtualLocal.toISOString().slice(0, -8);
     });
+
+    function filterFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("myDropdown");
+        a = div.getElementsByTagName("option");
+        for (i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                a[i].style.display = "";
+            } else {
+                a[i].style.display = "none";
+            }
+        }
+    }
 </script>

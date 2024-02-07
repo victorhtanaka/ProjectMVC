@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ProjectMVC.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateDatabase : Migration
+    public partial class CreateDatase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -44,8 +44,7 @@ namespace ProjectMVC.Migrations
                 {
                     LoginAdmin = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     SenhaAdmin = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
-                    RememberMe = table.Column<bool>(type: "bit", nullable: false),
-                    FkFilialCodFilial = table.Column<int>(type: "int", nullable: false)
+                    RememberMe = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -115,7 +114,9 @@ namespace ProjectMVC.Migrations
                 {
                     CodFilial = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    NomeFilial = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
+                    NomeFilial = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    EndFilial = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    TelFilial = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -129,10 +130,10 @@ namespace ProjectMVC.Migrations
                     CodFuncionario = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NomeFuncionario = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    CPFFuncionario = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: true),
-                    EndFuncionario = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
-                    EmailFuncionario = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
-                    TelFuncionario = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: true),
+                    CPFFuncionario = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
+                    EndFuncionario = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    EmailFuncionario = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    TelFuncionario = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
                     DataNasc = table.Column<DateOnly>(type: "date", nullable: false),
                     SalarioFuncionario = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     FkFilialCodFilial = table.Column<int>(type: "int", nullable: false),
@@ -164,7 +165,7 @@ namespace ProjectMVC.Migrations
                     CodRelatorio = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    DescRelatorio = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
+                    DescRelatorio = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     FkAgendaCodAgenda = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -179,7 +180,7 @@ namespace ProjectMVC.Migrations
                     CodServico = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NomeServico = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    DescServico = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
+                    DescServico = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -202,6 +203,55 @@ namespace ProjectMVC.Migrations
                 {
                     table.PrimaryKey("PK_Vendas", x => x.CodVenda);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Acessorios_NomeAcessorio",
+                table: "Acessorios",
+                column: "NomeAcessorio",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Agendas_DataAgenda_FkFuncionarioCodFuncionario",
+                table: "Agendas",
+                columns: new[] { "DataAgenda", "FkFuncionarioCodFuncionario" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Carros_NumChassi",
+                table: "Carros",
+                column: "NumChassi",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Clientes_CPFCliente",
+                table: "Clientes",
+                column: "CPFCliente",
+                unique: true,
+                filter: "[CPFCliente] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Filiais_NomeFilial",
+                table: "Filiais",
+                column: "NomeFilial",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Funcionarios_CPFFuncionario",
+                table: "Funcionarios",
+                column: "CPFFuncionario",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Funcoes_NomeFuncao",
+                table: "Funcoes",
+                column: "NomeFuncao",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Servicos_NomeServico",
+                table: "Servicos",
+                column: "NomeServico",
+                unique: true);
         }
 
         /// <inheritdoc />

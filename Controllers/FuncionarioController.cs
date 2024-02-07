@@ -42,11 +42,8 @@ public class FuncionarioController : Controller
     // CREATE
     public IActionResult Create()
     {
-
         ViewData["Filiais"] = _db.Filiais.ToList();
         ViewData["Funcoes"] = _db.Funcoes.ToList();
-        ViewData["Carros"] = _db.Carros.ToList();
-        ViewData["Funcionarios"] = _db.Funcionarios.ToList();
 
         return View(new Funcionario());
     }
@@ -63,8 +60,7 @@ public class FuncionarioController : Controller
         }
         ViewData["Filiais"] = _db.Filiais.ToList();
         ViewData["Funcoes"] = _db.Funcoes.ToList();
-        ViewData["Carros"] = _db.Carros.ToList();
-        ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+
         return View("Create", funcionario);
     }
 
@@ -94,7 +90,9 @@ public class FuncionarioController : Controller
 
             return RedirectToAction("Get");
         }
-
+        ViewData["Filiais"] = _db.Filiais.ToList();
+        ViewData["Funcoes"] = _db.Funcoes.ToList();
+        
         return View("Edit", funcionario);
     }
 

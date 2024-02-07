@@ -40,19 +40,20 @@ public class ServicoController : Controller
     // CREATE
     public IActionResult Create()
     {
-
-        ViewData["Servico"] = new Servico();
-
-        return View();
+        return View(new Servico());
     }
 
     [HttpPost]
     public IActionResult CriarServico(Servico Servico)
     {
-        _db.Servicos.Add(Servico);
-        _db.SaveChanges();
+        if (ModelState.IsValid)
+        {
+            _db.Servicos.Add(Servico);
+            _db.SaveChanges();
 
-        return RedirectToAction("Get");
+            return RedirectToAction("Get");
+        }
+        return View("Create", Servico);
     }
 
     // UPDATE

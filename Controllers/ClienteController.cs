@@ -40,17 +40,20 @@ public class ClienteController : Controller
     // CREATE
     public IActionResult Create()
     {
-
-        return View();
+        return View(new Cliente());
     }
 
     [HttpPost]
     public IActionResult CriarCliente(Cliente Cliente)
     {
-        _db.Clientes.Add(Cliente);
-        _db.SaveChanges();
+        if (ModelState.IsValid)
+        {
+            _db.Clientes.Add(Cliente);
+            _db.SaveChanges();
 
-        return RedirectToAction("Get");
+            return RedirectToAction("Get");
+        }
+        return View("Create", Cliente);
     }
 
     // UPDATE
@@ -71,6 +74,7 @@ public class ClienteController : Controller
     {
         if (ModelState.IsValid)
         {
+            
             var FuncAntigo = _db.Clientes.Find(Cliente.CodCliente);
             _db.Entry(FuncAntigo).CurrentValues.SetValues(Cliente);
             _db.SaveChanges();

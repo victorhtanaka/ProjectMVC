@@ -39,10 +39,7 @@ public class AcessorioController : Controller
     // CREATE
     public IActionResult Create()
     {
-
-        ViewData["Acessorio"] = new Acessorio();
-
-        return View();
+        return View(new Acessorio());
     }
 
     [HttpPost]

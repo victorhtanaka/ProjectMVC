@@ -46,22 +46,28 @@ public class VendaController : Controller
     // CREATE
     public IActionResult Create()
     {
-
-        ViewData["Venda"] = new Venda();
         ViewData["Clientes"] = _db.Clientes.ToList();
         ViewData["Carros"] = _db.Carros.ToList();
         ViewData["Funcionarios"] = _db.Funcionarios.ToList();
 
-        return View();
+        return View(new Venda());
     }
 
     [HttpPost]
     public IActionResult CriarVenda(Venda Venda)
     {
-        _db.Vendas.Add(Venda);
-        _db.SaveChanges();
+        if (ModelState.IsValid)
+        {
+            _db.Vendas.Add(Venda);
+            _db.SaveChanges();
 
-        return RedirectToAction("Get");
+            return RedirectToAction("Get");
+        }
+        ViewData["Clientes"] = _db.Clientes.ToList();
+        ViewData["Carros"] = _db.Carros.ToList();
+        ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+
+        return View("Create", Venda);
     }
 
     // UPDATE
@@ -91,7 +97,10 @@ public class VendaController : Controller
 
             return RedirectToAction("Get");
         }
-
+        ViewData["Clientes"] = _db.Clientes.ToList();
+        ViewData["Carros"] = _db.Carros.ToList();
+        ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+        
         return View("Edit", Venda);
     }
 

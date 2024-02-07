@@ -40,19 +40,20 @@ public class FuncaoController : Controller
     // CREATE
     public IActionResult Create()
     {
-
-        ViewData["Funcao"] = new Funcao();
-
-        return View();
+        return View(new Funcao());
     }
 
     [HttpPost]
     public IActionResult CriarFuncao(Funcao Funcao)
     {
-        _db.Funcoes.Add(Funcao);
-        _db.SaveChanges();
+        if (ModelState.IsValid)
+        {
+            _db.Funcoes.Add(Funcao);
+            _db.SaveChanges();
 
-        return RedirectToAction("Get");
+            return RedirectToAction("Get");
+        }
+        return View("Create", Funcao);
     }
 
     // UPDATE

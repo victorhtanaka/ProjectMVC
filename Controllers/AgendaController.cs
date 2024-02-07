@@ -63,6 +63,10 @@ public class AgendaController : Controller
 
             return RedirectToAction("Get");
         }
+        ViewData["Clientes"] = _db.Clientes.ToList();
+        ViewData["Servicos"] = _db.Servicos.ToList();
+        ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+
         return View("Create", agenda);
     }
 
@@ -93,7 +97,10 @@ public class AgendaController : Controller
 
             return RedirectToAction("Get");
         }
-
+        ViewData["Clientes"] = _db.Clientes.ToList();
+        ViewData["Servicos"] = _db.Servicos.ToList();
+        ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+        
         return View("Edit", Agenda);
     }
 
