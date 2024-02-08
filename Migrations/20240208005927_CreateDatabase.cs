@@ -177,15 +177,14 @@ namespace ProjectMVC.Migrations
                 name: "Servicos",
                 columns: table => new
                 {
-                    _CodServico = table.Column<int>(type: "int", nullable: false)
+                    CodServico = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    _NomeServico = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    _DescServico = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    NomeServico = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    NomeServico = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    DescServico = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Servicos", x => x._CodServico);
+                    table.PrimaryKey("PK_Servicos", x => x.CodServico);
                 });
 
             migrationBuilder.CreateTable(
@@ -251,8 +250,7 @@ namespace ProjectMVC.Migrations
                 name: "IX_Servicos_NomeServico",
                 table: "Servicos",
                 column: "NomeServico",
-                unique: true,
-                filter: "[NomeServico] IS NOT NULL");
+                unique: true);
         }
 
         /// <inheritdoc />

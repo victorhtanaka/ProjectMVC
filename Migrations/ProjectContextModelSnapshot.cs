@@ -347,30 +347,26 @@ namespace ProjectMVC.Migrations
 
             modelBuilder.Entity("ProjectMVC.Models.Servico", b =>
                 {
-                    b.Property<int>("_CodServico")
+                    b.Property<int>("CodServico")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("_CodServico"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CodServico"));
 
-                    b.Property<string>("NomeServico")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("_DescServico")
+                    b.Property<string>("DescServico")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("_NomeServico")
+                    b.Property<string>("NomeServico")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("_CodServico");
+                    b.HasKey("CodServico");
 
                     b.HasIndex("NomeServico")
-                        .IsUnique()
-                        .HasFilter("[NomeServico] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("Servicos");
                 });
