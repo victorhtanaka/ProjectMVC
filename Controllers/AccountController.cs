@@ -1,11 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Identity;  // Adicione esta diretiva
 using ProjectMVC.Models;
-using Microsoft.AspNet.Identity.Owin;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;  // Certifique-se de substituir pelo namespace correto do seu modelo de usuário
 
 public class AccountController : Controller
 {
@@ -34,7 +31,7 @@ public class AccountController : Controller
         {
             return NotFound("Login ou senha incorretos");
         }
-
+        // Verificação da presença de um login valido no BD
         if (modelLogin.LoginAdmin == admin.LoginAdmin &&
             modelLogin.SenhaAdmin == admin.SenhaAdmin
             )

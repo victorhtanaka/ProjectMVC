@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjectMVC.Models
 {
@@ -29,8 +28,8 @@ namespace ProjectMVC.Models
 
         [Required(ErrorMessage="O nome nao pode ser vazio.")]
         [StringLength(100, MinimumLength = 1, ErrorMessage = "A nome deve possuir no minimo 1 e no maximo 100 caracteres.")]
-        public string? NomeCliente {
-            get{
+        public string? NomeCliente { get; set;}
+            /*get{
                 return _NomeCliente;
             }set{
                 if (value == null || value == "")
@@ -40,7 +39,7 @@ namespace ProjectMVC.Models
                 {
                     _NomeCliente = value;
                 }
-            }}
+            }}*/
 
         [Required(ErrorMessage="O cpf nao pode ser vazio.")]
         [StringLength(15, MinimumLength = 1, ErrorMessage = "A cpf deve possuir no minimo 1 e no maximo 15 caracteres.")]
@@ -106,7 +105,7 @@ namespace ProjectMVC.Models
             get{
                 return _DataNasc;
             }set{
-                if (DateTime.Now.Year - value.Year > 130 || DateTime.Now.Year - value.Year < 0)
+                if (DateTime.Now.Year - value.Year > 130 || DateTime.Now.Year - value.Year <= 0)
                 {
                     throw new Exception("Erro ao tentar inserir uma data passada como DataNasc");
                 } else

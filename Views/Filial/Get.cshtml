@@ -26,6 +26,7 @@
                 <tr>
                     <td>Código</td>
                     <td>Nome</td>
+                    <td>Telefone</td>
                     <td>Opções</td>
                 </tr>
             </thead>
@@ -35,6 +36,7 @@
                     <tr>
                         <td>@item.CodFilial</td>
                         <td>@item.NomeFilial</td>
+                        <td>@item.TelFilial</td>
                         <td class="icon-td">
 
                             <a asp-controller="Filial" asp-action="GetInfo" asp-route-id="@item.CodFilial">

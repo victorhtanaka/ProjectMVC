@@ -26,7 +26,6 @@ public class ClienteController : Controller
 
     public IActionResult GetInfo(int id)
     {
-
         var Cliente = _db.Clientes.Find(id);
 
         if (Cliente == null)
@@ -74,7 +73,6 @@ public class ClienteController : Controller
     {
         if (ModelState.IsValid)
         {
-            
             var FuncAntigo = _db.Clientes.Find(Cliente.CodCliente);
             _db.Entry(FuncAntigo).CurrentValues.SetValues(Cliente);
             _db.SaveChanges();

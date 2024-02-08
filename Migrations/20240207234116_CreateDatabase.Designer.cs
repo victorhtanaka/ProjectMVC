@@ -12,8 +12,8 @@ using ProjectMVC.Models;
 namespace ProjectMVC.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20240206224344_CreateDatase")]
-    partial class CreateDatase
+    [Migration("20240207234116_CreateDatabase")]
+    partial class CreateDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -134,6 +134,7 @@ namespace ProjectMVC.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CorCarro")
+                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
@@ -144,6 +145,7 @@ namespace ProjectMVC.Migrations
                         .HasColumnType("real");
 
                     b.Property<string>("MarcaCarro")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
@@ -154,8 +156,8 @@ namespace ProjectMVC.Migrations
 
                     b.Property<string>("NumChassi")
                         .IsRequired()
-                        .HasMaxLength(18)
-                        .HasColumnType("nvarchar(18)");
+                        .HasMaxLength(17)
+                        .HasColumnType("nvarchar(17)");
 
                     b.Property<decimal>("ValorCarro")
                         .HasColumnType("decimal(18,2)");
@@ -177,6 +179,7 @@ namespace ProjectMVC.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CodCliente"));
 
                     b.Property<string>("CPFCliente")
+                        .IsRequired()
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
@@ -184,10 +187,12 @@ namespace ProjectMVC.Migrations
                         .HasColumnType("date");
 
                     b.Property<string>("EmailCliente")
+                        .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("EndCliente")
+                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
@@ -197,14 +202,14 @@ namespace ProjectMVC.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("TelCliente")
+                        .IsRequired()
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
                     b.HasKey("CodCliente");
 
                     b.HasIndex("CPFCliente")
-                        .IsUnique()
-                        .HasFilter("[CPFCliente] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("Clientes");
                 });
@@ -249,6 +254,7 @@ namespace ProjectMVC.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CodFuncao"));
 
                     b.Property<string>("DescricaoFuncao")
+                        .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
@@ -344,26 +350,30 @@ namespace ProjectMVC.Migrations
 
             modelBuilder.Entity("ProjectMVC.Models.Servico", b =>
                 {
-                    b.Property<int>("CodServico")
+                    b.Property<int>("_CodServico")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CodServico"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("_CodServico"));
 
-                    b.Property<string>("DescServico")
+                    b.Property<string>("NomeServico")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("_DescServico")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("NomeServico")
+                    b.Property<string>("_NomeServico")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("CodServico");
+                    b.HasKey("_CodServico");
 
                     b.HasIndex("NomeServico")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[NomeServico] IS NOT NULL");
 
                     b.ToTable("Servicos");
                 });
