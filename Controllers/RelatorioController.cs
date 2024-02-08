@@ -41,8 +41,9 @@ public class RelatorioController : Controller
     }
 
     // CREATE
-    public IActionResult Create()
+    public IActionResult Create(int id)
     {
+        ViewData["CodAgenda"] = id;
         return View(new Relatorio());
     }
 

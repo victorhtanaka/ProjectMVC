@@ -52,10 +52,10 @@
 
             <div class="form-group">
                 <label>Vendedor:</label>
-                <select asp-for="FkFuncionarioCodFuncionario" class="form-control" readonly>
-                    @foreach(var Carro in ViewData["Funcoes"] as List<Carro>)
+                <select asp-for="FkFuncionarioCodFuncionario" class="form-control" required>
+                    @foreach(var Funcionario in ViewData["Funcionarios"] as List<Funcionario>)
                     {
-                        <option value="@Carro.CodCarro">@Carro.ModeloCarro</option>
+                        <option value="@Funcionario.CodFuncionario"><p>@Funcionario.CodFuncionario</p> - <p>@Funcionario.NomeFuncionario</p></option>
                     }
                 </select>
             </div>
@@ -76,3 +76,21 @@
     </div>
 
 </form>
+
+<script>
+    function filterFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("myDropdown");
+        a = div.getElementsByTagName("option");
+        for (i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                a[i].style.display = "";
+            } else {
+                a[i].style.display = "none";
+            }
+        }
+    }
+</script>

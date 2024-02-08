@@ -93,16 +93,7 @@
         <h2>Adicionar relatorio do agendamento</h2>
 
         <div class="Servico-Agenda">
-
-            <div class="form-group">
-                <h3>Codigo Servico:</h3>
-                <p>@ServicoDaAgenda.CodServico</p>
-            </div>
-            <div class="form-group">
-                <h3>Chassi Servico:</h3>
-                <p>@ServicoDaAgenda.DescServico</p>
-            </div>
-
+            <button><a asp-action="Create" asp-controller="Relatorio" asp-route-id="@Model.CodAgenda">Adicionar</a></button>
         </div>
     
         </div>

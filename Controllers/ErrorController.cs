@@ -36,24 +36,24 @@ namespace ProjectMVC.Controllers
         [Route("Error")]
         public IActionResult Error()
         {
-            // Recuperar dados da Exceçao
-            var exceptionHandlerPathFeature = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
-
-            ViewBag.ExceptionPath = exceptionHandlerPathFeature.Path;
-            ViewBag.ExceptionMessage = exceptionHandlerPathFeature.Error.Message;
-            ViewBag.StackTrace = exceptionHandlerPathFeature.Error.StackTrace;
-
             string logFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Log.txt");
-            string dateTimeNow = DateTime.Now.ToString();
-            string logText = $"[{dateTimeNow}] - Path: {exceptionHandlerPathFeature.Path} Message: {exceptionHandlerPathFeature.Error.Message} StackTrace: {exceptionHandlerPathFeature.Error.StackTrace}";
-
+            
             try
             {
+                // Recuperar dados da Exceçao
+                var exceptionHandlerPathFeature = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
+
+                ViewBag.ExceptionPath = exceptionHandlerPathFeature.Path;
+                ViewBag.ExceptionMessage = exceptionHandlerPathFeature.Error.Message;
+                ViewBag.StackTrace = exceptionHandlerPathFeature.Error.StackTrace;
+
+                string dateTimeNow = DateTime.Now.ToString();
+                string logText = $"[{dateTimeNow}] - Path: {exceptionHandlerPathFeature.Path} Message: {exceptionHandlerPathFeature.Error.Message} StackTrace: {exceptionHandlerPathFeature.Error.StackTrace}";
                 System.IO.File.AppendAllText(logFilePath, logText, Encoding.UTF8);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao escrever no log: {ex.Message}");
+                System.IO.File.AppendAllText(logFilePath, $"Erro ao escrever no log: {ex.Message}", Encoding.UTF8);
             }
 
             return View("Error");
