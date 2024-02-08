@@ -1,8 +1,6 @@
-using System.Diagnostics;
-using System.Dynamic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.EntityFrameworkCore;
 using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers;
@@ -49,7 +47,16 @@ public class ServicoController : Controller
         if (ModelState.IsValid)
         {
             _db.Servicos.Add(Servico);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["uniqueAlert"] = "Nome do servico ja existe";
+
+                return View("Create", Servico);
+            }
 
             return RedirectToAction("Get");
         }
@@ -76,9 +83,16 @@ public class ServicoController : Controller
         {
             var ServicoAntiga = _db.Servicos.Find(Servico.CodServico);
             _db.Entry(ServicoAntiga).CurrentValues.SetValues(Servico);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["uniqueAlert"] = "Nome do servico ja existe";
 
-            return RedirectToAction("Get");
+                return View("Edit", Servico);
+            }
         }
 
         return View("Edit", Servico);

@@ -1,11 +1,12 @@
 @model Carro;
 @{
     ViewData["Title"] = "Adicionar Carro";
-}
-@{
     IEnumerable<Filial>? Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
+    string? uniqueAlert = ViewData["uniqueAlert"] as string;
 }
+
 <h1>Criar Carro</h1>
+
 <form asp-action="CriarCarro" asp-controller="Carro" method="post">
 
     <div class="row">
@@ -14,6 +15,12 @@
 
             <div class="form-group">
                 <label>Numero do Chassi:</label>
+                @{
+                    if (uniqueAlert != null)
+                    {
+                        <p style="color: red;">@uniqueAlert !</p>
+                    }
+                }
                 <input asp-for="NumChassi" type="text" pattern="[A-Za-z0-9]{3}[A-Za-z0-9]{6}[A-Za-z0-9]{2}[A-Za-z0-9]{6}" class="form-control" required>
             </div>
 

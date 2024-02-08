@@ -1,13 +1,7 @@
-using System;
-using System.Diagnostics;
-using System.Dynamic;
-using System.IO;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
-using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers
 {

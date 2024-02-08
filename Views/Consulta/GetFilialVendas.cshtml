@@ -1,0 +1,67 @@
+@{
+    ViewData["Title"] = "Salarios";
+
+    List<Venda>? Vendas = ViewData["Vendas"] as List<Venda>;
+    List<Funcionario>? Funcionarios = ViewData["Funcionarios"] as List<Funcionario>;
+    List<Filial>? Filiais = ViewData["Filiais"] as List<Filial>;
+    List<Carro>? Carros = ViewData["Carros"] as List<Carro>;
+    DateFilter? Dates = ViewData["Dates"] as DateFilter;
+}
+
+<h1>Vendas por filial</h1>
+<div class="date-range">
+    <p>Data Inicial: @Dates.DataIni</p>
+    <p>Data Final: @Dates.DataFin</p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Filial</td>
+                    <td>Valor bruto vendido</td>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    @{
+                        decimal totalVendas;
+
+                        foreach (Filial filial in Filiais)
+                        {    
+                            totalVendas = 0;
+                            foreach (Venda venda in Vendas)
+                            {
+                                if (venda.DataVenda <= Dates.DataFin && venda.DataVenda >= Dates.DataIni)
+                                {
+                                    Funcionario funcionario = Funcionarios.FirstOrDefault(f => f.CodFuncionario == venda.FkFuncionarioCodFuncionario);
+                                    if (funcionario.FkFilialCodFilial == filial.CodFilial)
+                                    {
+                                        Carro carro = Carros.FirstOrDefault(c => c.CodCarro == venda.FkCarroCodCarro);
+                                        totalVendas += carro.ValorCarro;
+                                    }
+                                }
+                            }
+                            <tr>
+                            <td>@filial.NomeFilial</td>
+                            <td>@totalVendas</td>
+                            </tr>
+                        }
+                    }
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .FiltroData {
+        display: flex;
+    }
+
+    .date-range {
+        display: flex;
+    }
+</style>

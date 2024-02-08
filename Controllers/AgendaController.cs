@@ -1,8 +1,6 @@
-using System.Diagnostics;
-using System.Dynamic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.EntityFrameworkCore;
 using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers;
@@ -49,6 +47,7 @@ public class AgendaController : Controller
         ViewData["Clientes"] = _db.Clientes.ToList();
         ViewData["Servicos"] = _db.Servicos.ToList();
         ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+        ViewData["Filiais"] = _db.Filiais.ToList();
 
         return View(new Agenda());
     }
@@ -59,13 +58,27 @@ public class AgendaController : Controller
         if (ModelState.IsValid)
         {
             _db.Agendas.Add(agenda);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException) 
+            {
+                ViewData["uniqueAlert"] = "Ja existe um agendamento com a mesma data e o mesmo funcionario";
+                ViewData["Clientes"] = _db.Clientes.ToList();
+                ViewData["Servicos"] = _db.Servicos.ToList();
+                ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+                ViewData["Filiais"] = _db.Filiais.ToList();
+
+                return View("Create", agenda);
+            }
 
             return RedirectToAction("Get");
         }
         ViewData["Clientes"] = _db.Clientes.ToList();
         ViewData["Servicos"] = _db.Servicos.ToList();
         ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+        ViewData["Filiais"] = _db.Filiais.ToList();
 
         return View("Create", agenda);
     }
@@ -82,6 +95,7 @@ public class AgendaController : Controller
         ViewData["Clientes"] = _db.Clientes.ToList();
         ViewData["Servicos"] = _db.Servicos.ToList();
         ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+        ViewData["Filiais"] = _db.Filiais.ToList();
 
         return View(Agenda);
     }
@@ -93,13 +107,27 @@ public class AgendaController : Controller
         {
             var FuncAntigo = _db.Agendas.Find(Agenda.CodAgenda);
             _db.Entry(FuncAntigo).CurrentValues.SetValues(Agenda);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException) 
+            {
+                ViewData["uniqueAlert"] = "Ja existe um agendamento com a mesma data e o mesmo funcionario";
+                ViewData["Clientes"] = _db.Clientes.ToList();
+                ViewData["Servicos"] = _db.Servicos.ToList();
+                ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+                ViewData["Filiais"] = _db.Filiais.ToList();
+
+                return View("Edit", Agenda);
+            }
 
             return RedirectToAction("Get");
         }
         ViewData["Clientes"] = _db.Clientes.ToList();
         ViewData["Servicos"] = _db.Servicos.ToList();
         ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+        ViewData["Filiais"] = _db.Filiais.ToList();
         
         return View("Edit", Agenda);
     }
@@ -116,6 +144,7 @@ public class AgendaController : Controller
         ViewData["Clientes"] = _db.Clientes.ToList();
         ViewData["Servicos"] = _db.Servicos.ToList();
         ViewData["Funcionarios"] = _db.Funcionarios.ToList();
+        ViewData["Filiais"] = _db.Filiais.ToList();
 
         return View(Agenda);
     }

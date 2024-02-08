@@ -1,8 +1,6 @@
-using System.Diagnostics;
-using System.Dynamic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.EntityFrameworkCore;
 using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers;
@@ -48,7 +46,15 @@ public class ClienteController : Controller
         if (ModelState.IsValid)
         {
             _db.Clientes.Add(Cliente);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["uniqueAlert"] = "Cliente com este CPF ja existe";
+                return View("Create", Cliente);
+            }
 
             return RedirectToAction("Get");
         }
@@ -75,7 +81,15 @@ public class ClienteController : Controller
         {
             var FuncAntigo = _db.Clientes.Find(Cliente.CodCliente);
             _db.Entry(FuncAntigo).CurrentValues.SetValues(Cliente);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["uniqueAlert"] = "Cliente com este CPF ja existe";
+                return View("Edit", Cliente);
+            }
 
             return RedirectToAction("Get");
         }

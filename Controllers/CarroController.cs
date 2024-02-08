@@ -1,8 +1,6 @@
-using System.Diagnostics;
-using System.Dynamic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.EntityFrameworkCore;
 using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers;
@@ -51,8 +49,17 @@ public class CarroController : Controller
         if (ModelState.IsValid)
         {
             _db.Carros.Add(carro);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["uniqueAlert"] = "Chassi do carro ja cadastrado";
+                ViewData["Filiais"] = _db.Filiais.ToList();
 
+                return View("Create", carro);
+            }
             return RedirectToAction("Get");
         }
         ViewData["Filiais"] = _db.Filiais.ToList();
@@ -81,8 +88,17 @@ public class CarroController : Controller
         {
             var CarroAntigo = _db.Carros.Find(carro.CodCarro);
             _db.Entry(CarroAntigo).CurrentValues.SetValues(carro);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["uniqueAlert"] = "Chassi do carro ja cadastrado";
+                ViewData["Filiais"] = _db.Filiais.ToList();
 
+                return View("Edit", carro);
+            }
             return RedirectToAction("Get");
         }
         ViewData["Filiais"] = _db.Filiais.ToList();

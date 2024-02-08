@@ -118,40 +118,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxHZXRJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consultas/GetFilialMais.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXEdldEZpbGlhbE1haXMuY3NodG1s
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consulta/GetFilialMais.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcR2V0RmlsaWFsTWFpcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consultas/GetFilialVendas.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXEdldEZpbGlhbFZlbmRhcy5jc2h0bWw=
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consulta/GetFilialVendas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcR2V0RmlsaWFsVmVuZGFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consultas/GetFuncionarioMais.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXEdldEZ1bmNpb25hcmlvTWFpcy5jc2h0bWw=
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consulta/GetFuncionarioMais.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcR2V0RnVuY2lvbmFyaW9NYWlzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consultas/GetModeloMais.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXEdldE1vZGVsb01haXMuY3NodG1s
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consulta/GetModeloMais.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcR2V0TW9kZWxvTWFpcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consultas/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXEluZGV4LmNzaHRtbA==
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consulta/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consultas/IndexFilialMais.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXEluZGV4RmlsaWFsTWFpcy5jc2h0bWw=
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consulta/IndexFilialMais.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcSW5kZXhGaWxpYWxNYWlzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consultas/IndexFilialVendas.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXEluZGV4RmlsaWFsVmVuZGFzLmNzaHRtbA==
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consulta/IndexFilialVendas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcSW5kZXhGaWxpYWxWZW5kYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consultas/IndexFuncionarioMais.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXEluZGV4RnVuY2lvbmFyaW9NYWlzLmNzaHRtbA==
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consulta/IndexFuncionarioMais.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcSW5kZXhGdW5jaW9uYXJpb01haXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consultas/IndexModeloMais.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXEluZGV4TW9kZWxvTWFpcy5jc2h0bWw=
+[C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Consulta/IndexModeloMais.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcSW5kZXhNb2RlbG9NYWlzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/victo/OneDrive/Documentos/ProjectMVC/Views/Filial/Create.cshtml]

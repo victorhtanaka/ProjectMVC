@@ -141,3 +141,12 @@ body {
   text-decoration: none;
   color: #fff;
 }
+
+.text-center {
+  margin-top: 8em;
+}
+
+.btn-secondary a {
+  color: white;
+  text-decoration: none;
+}

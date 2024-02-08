@@ -1,8 +1,6 @@
-using System.Diagnostics;
-using System.Dynamic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.EntityFrameworkCore;
 using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers;
@@ -51,7 +49,16 @@ public class FilialController : Controller
         if (ModelState.IsValid)
         {
             _db.Filiais.Add(filial);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["uniqueAlert"] = "Nome da filial ja esta sendo usada";
+
+                return View("Create", filial);
+            }
 
             return RedirectToAction("Get");
         }
@@ -78,7 +85,16 @@ public class FilialController : Controller
         {
             var FilialAntiga = _db.Filiais.Find(filial.CodFilial);
             _db.Entry(FilialAntiga).CurrentValues.SetValues(filial);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["uniqueAlert"] = "Nome da filial ja esta sendo usada";
+                
+                return View("Edit", filial);
+            }
 
             return RedirectToAction("Get");
         }

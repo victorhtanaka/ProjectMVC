@@ -1,5 +1,3 @@
-using System.Diagnostics;
-using System.Dynamic;
 using Microsoft.AspNetCore.Mvc;
 using ProjectMVC.Models;
 

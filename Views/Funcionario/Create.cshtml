@@ -3,10 +3,7 @@
     ViewData["Title"] = "Adicionar Funcionario";
 }
 @{
-    IEnumerable<Carro>? Carros = ViewData["Carros"] as IEnumerable<Carro>;
-    IEnumerable<Funcionario>? Funcionarios = ViewData["Funcionarios"] as IEnumerable<Funcionario>;
-    IEnumerable<Filial>? Filiais = ViewData["Filiais"] as IEnumerable<Filial>;
-    IEnumerable<Funcao>? Funcoes = ViewData["Funcoes"] as IEnumerable<Funcao>;
+    string? uniqueAlert = ViewData["uniqueAlert"] as string;
 }
 <h1>Criar Funcionario</h1>
 <form asp-action="CriarFuncionario" asp-controller="Funcionario" method="post">
@@ -22,6 +19,12 @@
 
             <div class="form-group">
                 <label>CPF:</label>
+                @{
+                    if (uniqueAlert != null)
+                    {
+                        <p style="color: red;">@uniqueAlert !</p>
+                    }
+                }
                 <input asp-for="CPFFuncionario" type="text" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" title="Formato correto: 999.999.999-99"class="form-control" required>
             </div>
 

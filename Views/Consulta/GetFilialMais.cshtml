@@ -1,0 +1,73 @@
+@{
+    ViewData["Title"] = "Salarios";
+
+    List<Venda>? Vendas = ViewData["Vendas"] as List<Venda>;
+    List<Funcionario>? Funcionarios = ViewData["Funcionarios"] as List<Funcionario>;
+    List<Filial>? Filiais = ViewData["Filiais"] as List<Filial>;
+    List<Carro>? Carros = ViewData["Carros"] as List<Carro>;
+    DateFilter? Dates = ViewData["Dates"] as DateFilter;
+}
+
+<h1>Filiais que mais venderam</h1>
+<div class="date-range">
+    <p>Data Inicial: @Dates.DataIni</p>
+    <p>Data Final: @Dates.DataFin</p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Filial com mais vendas</td>
+                    <td>Valor bruto vendido</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @{
+                        decimal vendasAtual = 0;
+                        decimal vendasMaior = 0;
+                        Filial filialMaisVendas = Filiais[0];
+
+                        foreach (Filial filial in Filiais)
+                        {    
+                            vendasAtual = 0;
+                            foreach (Venda venda in Vendas)
+                            {
+                                if (venda.DataVenda <= Dates.DataFin && venda.DataVenda >= Dates.DataIni)
+                                {
+                                    Funcionario funcionario = Funcionarios.FirstOrDefault(f => f.CodFuncionario == venda.FkFuncionarioCodFuncionario);
+                                    if (funcionario.FkFilialCodFilial == filial.CodFilial)
+                                    {
+                                        Carro carro = Carros.FirstOrDefault(c => c.CodCarro == venda.FkCarroCodCarro);
+                                        vendasAtual += carro.ValorCarro ;
+                                    }
+                                }
+                            }
+                            if (vendasAtual > vendasMaior)
+                            {
+                                vendasMaior = vendasAtual;
+                                filialMaisVendas = filial;
+                            }
+                        }
+                        
+                        <td>@filialMaisVendas.NomeFilial</td>
+                        <td>@vendasMaior</td>
+                    }
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .FiltroData {
+        display: flex;
+    }
+
+    .date-range {
+        display: flex;
+    }
+</style>

@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Gerar Relatorio";
+}
+
+<h1>Consultas variadas</h1>
+
+<div class="row">
+    <div class="col-md-12">
+    <table>
+        <tr><td><a asp-controller="Consulta" asp-action="IndexFilialMais">Filiais que mais venderam</a></td></tr>
+        <tr><td><a asp-controller="Consulta" asp-action="IndexFilialVendas">Vendas por filial</a></td></tr>
+        <tr><td><a asp-controller="Consulta" asp-action="IndexFuncionarioMais">Funcionario que mais vendeu</a></td></tr>
+        <tr><td><a asp-controller="Consulta" asp-action="IndexModeloMais">Modelos de carro mais vendidos</a></td></tr>
+        <tr><td><a asp-controller="Salario" asp-action="Index">Ver salarios</a></td></tr>
+    </table>
+        
+    </div>
+</div>
+        

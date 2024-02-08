@@ -4,6 +4,7 @@
     IEnumerable<Cliente>? Clientes = ViewData["Clientes"] as IEnumerable<Cliente>;
     IEnumerable<Servico>? Servicos = ViewData["Servicos"] as IEnumerable<Servico>;
     IEnumerable<Funcionario>? funcionarios = ViewData["Funcionarios"] as IEnumerable<Funcionario>;
+    string? uniqueAlert = ViewData["uniqueAlert"] as string;
 }
 
 <h1>Editar Agendamento</h1>
@@ -18,6 +19,12 @@
 
         <div class="form-group">
                 <label>Data Agendamento:</label>
+                @{
+                    if (uniqueAlert != null)
+                    {
+                        <p style="color: red;">@uniqueAlert !</p>
+                    }
+                }
                 <input id="dataInput" asp-for="DataAgenda" type="datetime-local" class="form-control" required>
             </div>
 
@@ -63,6 +70,12 @@
 
             <div class="form-group">
                 <label>Funcionario:</label>
+                @{
+                    if (uniqueAlert != null)
+                    {
+                        <p style="color: red;">@uniqueAlert !</p>
+                    }
+                }
                 <select asp-for="FkFuncionarioCodFuncionario" class="form-control" required>
                     @foreach(var Funcionario in ViewData["Funcionarios"] as List<Funcionario>)
                     {

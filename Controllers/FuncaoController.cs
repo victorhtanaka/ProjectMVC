@@ -1,8 +1,6 @@
-using System.Diagnostics;
-using System.Dynamic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.EntityFrameworkCore;
 using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers;
@@ -49,7 +47,15 @@ public class FuncaoController : Controller
         if (ModelState.IsValid)
         {
             _db.Funcoes.Add(Funcao);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["uniqueAlert"] = "Nome da funcao ja esta sendo usado";
+                return View("Create", Funcao);
+            }
 
             return RedirectToAction("Get");
         }
@@ -76,7 +82,15 @@ public class FuncaoController : Controller
         {
             var FuncaoAntiga = _db.Funcoes.Find(Funcao.CodFuncao);
             _db.Entry(FuncaoAntiga).CurrentValues.SetValues(Funcao);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["uniqueAlert"] = "Nome da funcao ja esta sendo usado";
+                return View("Edit", Funcao);
+            }
 
             return RedirectToAction("Get");
         }

@@ -1,11 +1,9 @@
 using ProjectMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
-using System.Data.Common;
 
 
 namespace ProjectMVC.Controllers

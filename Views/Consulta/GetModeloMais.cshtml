@@ -1,0 +1,82 @@
+@{
+    ViewData["Title"] = "Salarios";
+
+    List<Venda>? Vendas = ViewData["Vendas"] as List<Venda>;
+    List<Funcionario>? Funcionarios = ViewData["Funcionarios"] as List<Funcionario>;
+    List<Filial>? Filiais = ViewData["Filiais"] as List<Filial>;
+    List<Carro>? Carros = ViewData["Carros"] as List<Carro>;
+    DateFilter? Dates = ViewData["Dates"] as DateFilter;
+}
+
+<h1>Modelo mais vendido</h1>
+<div class="date-range">
+    <p>Data Inicial: @Dates.DataIni</p>
+    <p>Data Final: @Dates.DataFin</p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Modelo mais vendido</td>
+                    <td>Valor bruto vendido</td>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    @{
+                        decimal vendasAtual = 0;
+                        decimal vendasMaior = 0;
+                        string modeloMaisVendas = "";
+                        List<string> modelos = new List<string>();
+                        foreach (Carro carro in Carros)
+                        {    
+                            if (!modelos.Contains(carro.ModeloCarro))
+                            {
+                                modelos.Add(carro.ModeloCarro);
+                            }
+                        }
+                        foreach(string modelo in modelos)
+                        {
+                            vendasAtual = 0;
+                            foreach (Venda venda in Vendas)
+                            {
+                                
+                                if (venda.DataVenda <= Dates.DataFin && venda.DataVenda >= Dates.DataIni)
+                                {
+                                    Carro carro = Carros.FirstOrDefault(c => c.CodCarro == venda.FkCarroCodCarro);
+                                    if (carro.ModeloCarro == modelo)
+                                    {
+                                        vendasAtual += carro.ValorCarro;
+                                    }
+                                }
+                            }
+                            if (vendasAtual > vendasMaior)
+                            {
+                                vendasMaior = vendasAtual;
+                                modeloMaisVendas = modelo;
+                            }
+                        }
+                        <tr>
+                            <td>@modeloMaisVendas</td>
+                            <td>@vendasMaior</td>
+                        </tr>
+                        
+                    }
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .FiltroData {
+        display: flex;
+    }
+
+    .date-range {
+        display: flex;
+    }
+</style>

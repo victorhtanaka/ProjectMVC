@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers;
@@ -51,7 +52,18 @@ public class FuncionarioController : Controller
         if (ModelState.IsValid)
         {
             _db.Funcionarios.Add(funcionario);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["Filiais"] = _db.Filiais.ToList();
+                ViewData["Funcoes"] = _db.Funcoes.ToList();
+                ViewData["uniqueAlert"] = "Um funcionario com o mesmo cpf ja esta cadastrado";
+                
+                return View("Create", funcionario);
+            }
 
             return RedirectToAction("Get");
         }
@@ -83,7 +95,18 @@ public class FuncionarioController : Controller
         {
             var FuncAntigo = _db.Funcionarios.Find(funcionario.CodFuncionario);
             _db.Entry(FuncAntigo).CurrentValues.SetValues(funcionario);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["Filiais"] = _db.Filiais.ToList();
+                ViewData["Funcoes"] = _db.Funcoes.ToList();
+                ViewData["uniqueAlert"] = "Um funcionario com o mesmo cpf ja esta cadastrado";
+
+                return View("Edit", funcionario);
+            }
 
             return RedirectToAction("Get");
         }

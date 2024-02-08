@@ -1,8 +1,5 @@
-using System.Diagnostics;
-using System.Dynamic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore;
 using ProjectMVC.Models;
 
 namespace ProjectMVC.Controllers;
@@ -48,7 +45,15 @@ public class AcessorioController : Controller
         if (ModelState.IsValid) 
         {
             _db.Acessorios.Add(acessorio);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["uniqueAlert"] = "Nome do acessório existente";
+                return View("Create", acessorio);
+            }
 
             return RedirectToAction("Get");
         }
@@ -75,7 +80,15 @@ public class AcessorioController : Controller
         {
             var AcessorioAntigo = _db.Acessorios.Find(acessorio.CodAcessorio);
             _db.Entry(AcessorioAntigo).CurrentValues.SetValues(acessorio);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ViewData["uniqueAlert"] = "Nome do acessório existente";
+                return View("Edit", acessorio);
+            }
 
             return RedirectToAction("Get");
         }

@@ -1,6 +1,7 @@
 @model Funcao;
 @{
     ViewData["Title"] = "Editar Funcao";
+    string? uniqueAlert = ViewData["uniqueAlert"] as string;
 }
 <h1>Editar Funcao</h1>
 <form asp-action="EditarFuncao" asp-controller="Funcao" method="post">
@@ -15,6 +16,12 @@
 
             <div class="form-group">
                 <label>Nome:</label>
+                @{
+                    if (uniqueAlert != null)
+                    {
+                        <p style="color: red;">@uniqueAlert !</p>
+                    }
+                }
                 <input asp-for="NomeFuncao" type="text" class="form-control" required>
             </div>
 

@@ -22,7 +22,6 @@ public class ConsultaController : Controller
         return View();
     }
 
-
     public IActionResult IndexFilialMais()
     {
         return View(new DateFilter());

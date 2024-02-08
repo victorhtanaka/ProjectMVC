@@ -1,6 +1,7 @@
 @model Cliente;
 @{
     ViewData["Title"] = "Editar Cliente";
+    string? uniqueAlert = ViewData["uniqueAlert"] as string;
 }
 
 <h1>Editar Cliente</h1>
@@ -17,6 +18,12 @@
 
             <div class="form-group">
                 <label>Nome:</label>
+                @{
+                    if (uniqueAlert != null)
+                    {
+                        <p style="color: red;">@uniqueAlert !</p>
+                    }
+                }
                 <input asp-for="NomeCliente" type="text" class="form-control" required>
             </div>
 
