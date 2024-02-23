@@ -1,20 +1,25 @@
-<h1>Projeto MVC - Volvo</h1>
-<p>Um gestor logístico para redes de concessionárias.</p>
+# Projeto MVC - Volvo
 
-<h2>> Instalação</h2>
-<p>1 - Trocar conexão com o sql no arquivo context</p>
+Um gestor logístico para redes de concessionárias.
 
-<p>2 - Executar comando para criar o banco de dados a partir da migration</p>
+## > Instalação
+1 - Trocar conexão com o servidor no arquivo context para a conexão do seu servidor SQL.
 ```c#
 protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=YOURSERVER;Database=ProjectMVC;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True;");
         }
 ```
-<p></p>
-<p></p>
-<p></p>
 
-3 - Adicionar um registro na tabela adminInfo
+2 - Executar comando para criar o banco de dados a partir da migration.
+```bash
+dotnet ef database update
+```
+
+3 - Adicionar um registro na tabela AdminInfos, esse será seu login.
+![image](https://github.com/victorhtanaka/ProjectMVC/assets/131787507/fa0cc24a-4e86-4e34-aab7-a9fa49411a14)
+
 4 - dotnet run
-5 - Colocar as informações do registro de admin nos campos do login
+```bash
+dotnet run
+```
