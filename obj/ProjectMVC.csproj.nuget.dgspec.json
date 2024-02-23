@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\victo\\OneDrive\\Documentos\\ProjectMVC\\ProjectMVC.csproj": {}
+    "C:\\Users\\victo\\ProjectMVC\\ProjectMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\victo\\OneDrive\\Documentos\\ProjectMVC\\ProjectMVC.csproj": {
+    "C:\\Users\\victo\\ProjectMVC\\ProjectMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\victo\\OneDrive\\Documentos\\ProjectMVC\\ProjectMVC.csproj",
+        "projectUniqueName": "C:\\Users\\victo\\ProjectMVC\\ProjectMVC.csproj",
         "projectName": "ProjectMVC",
-        "projectPath": "C:\\Users\\victo\\OneDrive\\Documentos\\ProjectMVC\\ProjectMVC.csproj",
+        "projectPath": "C:\\Users\\victo\\ProjectMVC\\ProjectMVC.csproj",
         "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\victo\\OneDrive\\Documentos\\ProjectMVC\\obj\\",
+        "outputPath": "C:\\Users\\victo\\ProjectMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",

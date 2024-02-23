@@ -9,303 +9,303 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProjectMVC
 build_property.RootNamespace = ProjectMVC
-build_property.ProjectDir = c:\Users\patum\OneDrive - Grupo Marista\Programação\Curso Volvo\MVC\ProjectMVC\
+build_property.ProjectDir = C:\Users\victo\ProjectMVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\patum\OneDrive - Grupo Marista\Programação\Curso Volvo\MVC\ProjectMVC
+build_property.MSBuildProjectDirectory = C:\Users\victo\ProjectMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Account/Login.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/AcessorioCarro/Create.cshtml]
+[C:/Users/victo/ProjectMVC/Views/AcessorioCarro/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvcmlvQ2Fycm9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/AcessorioCarro/Delete.cshtml]
+[C:/Users/victo/ProjectMVC/Views/AcessorioCarro/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvcmlvQ2Fycm9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/AcessorioCarro/Get.cshtml]
+[C:/Users/victo/ProjectMVC/Views/AcessorioCarro/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvcmlvQ2Fycm9cR2V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/AcessorioCarro/GetInfo.cshtml]
+[C:/Users/victo/ProjectMVC/Views/AcessorioCarro/GetInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvcmlvQ2Fycm9cR2V0SW5mby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Acessorio/Create.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Acessorio/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvcmlvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Acessorio/Delete.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Acessorio/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvcmlvXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Acessorio/Edit.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Acessorio/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvcmlvXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Acessorio/Get.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Acessorio/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvcmlvXEdldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Acessorio/GetInfo.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Acessorio/GetInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvcmlvXEdldEluZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Agenda/Create.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Agenda/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Agenda/Delete.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Agenda/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Agenda/Edit.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Agenda/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Agenda/Get.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Agenda/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhXEdldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Agenda/GetInfo.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Agenda/GetInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhXEdldEluZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Carro/Create.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Carro/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycm9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Carro/Delete.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Carro/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycm9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Carro/Edit.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Carro/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycm9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Carro/Get.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Carro/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycm9cR2V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Carro/GetInfo.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Carro/GetInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycm9cR2V0SW5mby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Cliente/Create.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Cliente/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Cliente/Delete.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Cliente/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Cliente/Edit.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Cliente/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Cliente/Get.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Cliente/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxHZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Cliente/GetInfo.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Cliente/GetInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxHZXRJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Consulta/GetFilialMais.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Consulta/GetFilialMais.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcR2V0RmlsaWFsTWFpcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Consulta/GetFilialVendas.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Consulta/GetFilialVendas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcR2V0RmlsaWFsVmVuZGFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Consulta/GetFuncionarioMais.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Consulta/GetFuncionarioMais.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcR2V0RnVuY2lvbmFyaW9NYWlzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Consulta/GetModeloMais.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Consulta/GetModeloMais.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcR2V0TW9kZWxvTWFpcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Consulta/Index.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Consulta/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Consulta/IndexFilialMais.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Consulta/IndexFilialMais.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcSW5kZXhGaWxpYWxNYWlzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Consulta/IndexFilialVendas.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Consulta/IndexFilialVendas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcSW5kZXhGaWxpYWxWZW5kYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Consulta/IndexFuncionarioMais.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Consulta/IndexFuncionarioMais.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcSW5kZXhGdW5jaW9uYXJpb01haXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Consulta/IndexModeloMais.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Consulta/IndexModeloMais.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcSW5kZXhNb2RlbG9NYWlzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Filial/Create.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Filial/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsaWFsXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Filial/Delete.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Filial/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsaWFsXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Filial/Edit.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Filial/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsaWFsXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Filial/Get.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Filial/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsaWFsXEdldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Filial/GetInfo.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Filial/GetInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsaWFsXEdldEluZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Funcao/Create.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Funcao/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2FvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Funcao/Delete.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Funcao/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2FvXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Funcao/Edit.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Funcao/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2FvXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Funcao/Get.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Funcao/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2FvXEdldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Funcao/GetInfo.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Funcao/GetInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2FvXEdldEluZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Funcionario/Create.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Funcionario/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Funcionario/Delete.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Funcionario/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Funcionario/Edit.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Funcionario/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Funcionario/Get.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Funcionario/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9cR2V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Funcionario/GetInfo.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Funcionario/GetInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9cR2V0SW5mby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Home/Index.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Relatorio/Create.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Relatorio/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Relatorio/Delete.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Relatorio/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Relatorio/Edit.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Relatorio/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Relatorio/Get.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Relatorio/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvXEdldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Relatorio/GetInfo.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Relatorio/GetInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvXEdldEluZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Salario/Get.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Salario/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJpb1xHZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Salario/Index.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Salario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Servico/Create.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Servico/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vydmljb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Servico/Delete.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Servico/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vydmljb1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Servico/Edit.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Servico/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vydmljb1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Servico/Get.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Servico/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vydmljb1xHZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Servico/GetInfo.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Servico/GetInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vydmljb1xHZXRJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Shared/Error.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Shared/NotFound.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Shared/NotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Venda/Create.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Venda/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Venda/Delete.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Venda/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Venda/Edit.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Venda/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Venda/Get.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Venda/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFcR2V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Venda/GetInfo.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Venda/GetInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFcR2V0SW5mby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/_ViewImports.cshtml]
+[C:/Users/victo/ProjectMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/_ViewStart.cshtml]
+[C:/Users/victo/ProjectMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/patum/OneDrive - Grupo Marista/Programação/Curso Volvo/MVC/ProjectMVC/Views/Shared/_Layout.cshtml]
+[C:/Users/victo/ProjectMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-0wcizqx7zl
