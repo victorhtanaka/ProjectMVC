@@ -1,6 +1,6 @@
 # Projeto MVC - Volvo
 
-Um gestor logístico para redes de concessionárias.
+Um gestor logístico para redes de concessionárias de automóveis.
 
 ## > Instalação
 1 - Trocar conexão com o servidor no arquivo context para a conexão do seu servidor SQL.
