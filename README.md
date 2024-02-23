@@ -27,3 +27,6 @@ dotnet ef database update
 ```bash
 dotnet run
 ```
+
+5 - Acessar o url do sistema.
+"http://localhost:5222"
