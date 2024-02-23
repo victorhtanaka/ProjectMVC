@@ -5,7 +5,7 @@
 <p>1 - Trocar conexão com o sql no arquivo context</p>
 
 <p>2 - Executar comando para criar o banco de dados a partir da migration</p>
-![ps1](https://github.com/victorhtanaka/ProjectMVC/assets/131787507/8f57afbc-1093-4634-bd75-c7988d95aad5)
+![Screenshot](ps1.png)
 
 <p></p>
 <p></p>
