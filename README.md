@@ -11,14 +11,17 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         }
 ```
 
+
 2 - Executar comando para criar o banco de dados a partir da migration.
 ```bash
 dotnet ef database update
 ```
 
+
 3 - Adicionar um registro na tabela AdminInfos, esse será seu login.
 
 ![image](https://github.com/victorhtanaka/ProjectMVC/assets/131787507/fa0cc24a-4e86-4e34-aab7-a9fa49411a14)
+
 
 4 - dotnet run
 ```bash
