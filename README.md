@@ -23,7 +23,7 @@ dotnet ef database update
 ![image](https://github.com/victorhtanaka/ProjectMVC/assets/131787507/fa0cc24a-4e86-4e34-aab7-a9fa49411a14)
 
 
-4 - dotnet run
+4 - Executar o comando para rodar o programa.
 ```bash
 dotnet run
 ```
