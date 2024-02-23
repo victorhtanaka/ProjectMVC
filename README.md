@@ -32,7 +32,7 @@ dotnet run
 "http://localhost:5222"
 
 
-## Funcionalidades
+## > Funcionalidades
 
 ![image](https://github.com/victorhtanaka/ProjectMVC/assets/131787507/5569607e-2289-40ea-b5f8-8d50b7fb36ef)
 
@@ -40,10 +40,10 @@ dotnet run
 
 ![image](https://github.com/victorhtanaka/ProjectMVC/assets/131787507/f31a7466-9557-4878-a662-bb2d340e571f)
 
-## Colaboradores
+## > Colaboradores
 
 ![Victor Tanaka](https://github.com/victorhtanaka)
 ![Matheus Machado](https://github.com/DevMatheus2)
 
-## Licença
+## > Licença
 [MIT](https://choosealicense.com/licenses/mit/)
