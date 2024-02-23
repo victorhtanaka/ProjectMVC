@@ -30,3 +30,11 @@ dotnet run
 
 5 - Acessar o url do sistema.
 "http://localhost:5222"
+
+
+## Funcionalidades
+
+![image](https://github.com/victorhtanaka/ProjectMVC/assets/131787507/5569607e-2289-40ea-b5f8-8d50b7fb36ef)
+
+![image](https://github.com/victorhtanaka/ProjectMVC/assets/131787507/afb28cbd-fb36-47cc-bf6a-1122bacb3a54)
+
