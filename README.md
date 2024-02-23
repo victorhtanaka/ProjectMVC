@@ -5,7 +5,7 @@
 <p>1 - Trocar conexão com o sql no arquivo context</p>
 
 <p>2 - Executar comando para criar o banco de dados a partir da migration</p>
-```cs
+```c#
 protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=YOURSERVER;Database=ProjectMVC;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True;");
